@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "rust-lang.rust-analyzer",
+        "svelte.svelte-vscode",
+        "bradlc.vscode-tailwindcss",
+        "tauri-apps.tauri-vscode",
+        "tamasfe.even-better-toml",
+        "fill-labs.dependi"
+    ]
+}
