@@ -11,7 +11,12 @@ pkgs.mkShell {
     nodejs # Optional, this is for if you have a js frontend
     gcc
     llvmPackages.lld
+
     fish
+    pnpm
+    rustup
+    rust-analyzer
+    sccache
   ];
 
   buildInputs = with pkgs;[
@@ -31,7 +36,8 @@ pkgs.mkShell {
   shellHook = ''
     export IN_NIX_SHELL=1
 
-    export NIX_ENFORCE_PURITY=0
+    export RUSTC_WRAPPER=${pkgs.sccache}/bin/sccache
+
     export SHELL=${pkgs.fish}/bin/fish
     if [ -z "$FISH_VERSION" ] && [ -n "$PS1" ]; then
       exec ${pkgs.fish}/bin/fish
