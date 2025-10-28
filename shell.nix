@@ -29,6 +29,8 @@ pkgs.mkShell {
     openssl
   ];
   shellHook = ''
+    export IN_NIX_SHELL=1
+
     export NIX_ENFORCE_PURITY=0
     export SHELL=${pkgs.fish}/bin/fish
     if [ -z "$FISH_VERSION" ] && [ -n "$PS1" ]; then
