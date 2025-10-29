@@ -10,6 +10,10 @@
 	let startX = 0;
 	let startLeft = leftWidth;
 	let startRight = rightWidth;
+	let draftMessage = "";
+	let composerTextarea: HTMLTextAreaElement | null = null;
+	const composerMaxRows = 7;
+	let composerMaxHeight = 0;
 
 	function onPointerDown(handle: "left" | "right", event: PointerEvent) {
 		activeHandle = handle;
@@ -35,6 +39,52 @@
 		activeHandle = null;
 		window.removeEventListener("pointermove", onPointerMove);
 	}
+
+	function ensureComposerMetrics() {
+		if (!composerTextarea || composerMaxHeight) return;
+
+		const styles = getComputedStyle(composerTextarea);
+		const fontSize = parseFloat(styles.fontSize) || 16;
+		const rawLineHeight = parseFloat(styles.lineHeight);
+		const lineHeight = Number.isFinite(rawLineHeight) && rawLineHeight > 0 ? rawLineHeight : fontSize * 1.3;
+		const padding =
+			parseFloat(styles.paddingTop) +
+			parseFloat(styles.paddingBottom) +
+			parseFloat(styles.borderTopWidth) +
+			parseFloat(styles.borderBottomWidth);
+
+		const verticalSpacing = Number.isFinite(padding) ? padding : 0;
+		composerMaxHeight = lineHeight * composerMaxRows + verticalSpacing;
+	}
+
+	function resizeComposer() {
+		if (!composerTextarea) return;
+		if (!composerMaxHeight) ensureComposerMetrics();
+
+		composerTextarea.style.height = "auto";
+		const scrollHeight = composerTextarea.scrollHeight;
+		const nextHeight =
+			composerMaxHeight > 0 ? Math.min(scrollHeight, composerMaxHeight) : scrollHeight;
+		composerTextarea.style.height = `${nextHeight}px`;
+	}
+
+	function sendMessage() {
+		const trimmed = draftMessage.trim();
+		if (!trimmed) return;
+
+		console.info("sendMessage not wired to backend yet", trimmed);
+		draftMessage = "";
+		resizeComposer();
+	}
+
+	function onComposerKeydown(event: KeyboardEvent) {
+		if (event.key === "Enter" && !event.shiftKey) {
+			event.preventDefault();
+			sendMessage();
+		}
+	}
+
+	$: resizeComposer();
 </script>
 
 <main class="flex h-screen w-screen p-2">
@@ -101,12 +151,34 @@
 				text="Hello. I'm Kheper... How can I help you today? Is there anything specific you'd like to discuss? I'm here to assist you with a wide range of topics and questions. Feel free to ask me anything!"
 			/>
 		</div>
-		<div class="h-10 bg-panel border border-border">
-			<input
-				type="text"
-				class="w-full h-full bg-transparent border-none outline-none"
-			/>
-		</div>
+		<form
+			class="mt-2 mb-2 flex shrink-0 items-end gap-2 rounded-lg border border-border bg-panel p-3 shadow-sm"
+			on:submit|preventDefault={sendMessage}
+		>
+			<button
+				type="button"
+				class="h-10 w-10 shrink-0 rounded-full border border-border bg-message-background text-sm font-semibold"
+				aria-label="Attach file"
+			>
+				+
+			</button>
+			<textarea
+				bind:this={composerTextarea}
+				class="flex-1 resize-none rounded-md border border-border bg-transparent px-3 py-2 text-sm text-foreground focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/40"
+				placeholder="Type a message…"
+				bind:value={draftMessage}
+				on:input={resizeComposer}
+				on:keydown={onComposerKeydown}
+				rows="1"
+				style={`max-height:${composerMaxHeight ? `${composerMaxHeight}px` : "none"}; overflow-y:auto;`}
+			></textarea>
+			<button
+				type="submit"
+				class="h-10 shrink-0 rounded-md bg-accent px-4 text-sm font-semibold text-accent-foreground hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent"
+			>
+				Send
+			</button>
+		</form>
 	</div>
 
 	<div
