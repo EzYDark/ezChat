@@ -35,6 +35,7 @@
 
     .custom-scrollbar {
         padding-inline-end: 6px;
+        margin-bottom: 8px;
     }
 
     .custom-scrollbar::-webkit-scrollbar {
