@@ -1,620 +1,119 @@
-   0.493995543s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat_lib"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 1761756774.382198687s > 1761672349.737032108s "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/x11-dl-2.21.0"
-   0.501751267s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat_lib"}: cargo::core::compiler::fingerprint: fingerprint dirty for ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri)/Check { test: false }/TargetInner { ..: lib_target("ezchat_lib", ["staticlib", "cdylib", "rlib"], "/home/ezy/_projects/Tauri/ezchat/src-tauri/src/lib.rs", Edition2021) }
-   0.502163738s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat_lib"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "tauri", old_fingerprint: 14839615404367463863, new_name: "tauri", new_fingerprint: 10162384015068009289 }
-   0.510811128s  INFO prepare_target{force=false package_id=tauri v2.9.1 target="tauri"}: cargo::core::compiler::fingerprint: fingerprint dirty for tauri v2.9.1/Check { test: false }/TargetInner { ..: lib_target("tauri", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-2.9.1/src/lib.rs", Edition2021) }
-   0.510828140s  INFO prepare_target{force=false package_id=tauri v2.9.1 target="tauri"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "webkit2gtk", old_fingerprint: 2105183306479314559, new_name: "webkit2gtk", new_fingerprint: 8800973627547555345 }
-   0.513998923s  INFO prepare_target{force=false package_id=gtk v0.18.2 target="gtk"}: cargo::core::compiler::fingerprint: fingerprint dirty for gtk v0.18.2/Check { test: false }/TargetInner { ..: lib_target("gtk", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gtk-0.18.2/src/lib.rs", Edition2021) }
-   0.514013216s  INFO prepare_target{force=false package_id=gtk v0.18.2 target="gtk"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "gdk", old_fingerprint: 12540813046470263897, new_name: "gdk", new_fingerprint: 12836887264675313674 }
-   0.514574473s  INFO prepare_target{force=false package_id=atk v0.18.2 target="atk"}: cargo::core::compiler::fingerprint: fingerprint dirty for atk v0.18.2/Check { test: false }/TargetInner { ..: lib_target("atk", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/atk-0.18.2/src/lib.rs", Edition2021) }
-   0.514582490s  INFO prepare_target{force=false package_id=atk v0.18.2 target="atk"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "ffi", old_fingerprint: 9018912665185810048, new_name: "ffi", new_fingerprint: 17057555799924160710 }
-   0.514977113s  INFO prepare_target{force=false package_id=atk-sys v0.18.2 target="atk_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for atk-sys v0.18.2/Check { test: false }/TargetInner { ..: lib_target("atk_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/atk-sys-0.18.2/src/lib.rs", Edition2021) }
-   0.514985201s  INFO prepare_target{force=false package_id=atk-sys v0.18.2 target="atk_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "build_script_build", old_fingerprint: 12045183672755067978, new_name: "build_script_build", new_fingerprint: 8477011041483984724 }
-   0.515214095s  INFO prepare_target{force=false package_id=atk-sys v0.18.2 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint dirty for atk-sys v0.18.2/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/atk-sys-0.18.2/build.rs", Edition2021) }
-   0.515221137s  INFO prepare_target{force=false package_id=atk-sys v0.18.2 target="build-script-build"}: cargo::core::compiler::fingerprint:     dirty: EnvVarChanged { name: "PKG_CONFIG", old_value: Some("pkg-config"), new_value: None }
-   0.515688618s  INFO prepare_target{force=false package_id=glib-sys v0.18.1 target="glib_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for glib-sys v0.18.1/Check { test: false }/TargetInner { ..: lib_target("glib_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/glib-sys-0.18.1/src/lib.rs", Edition2021) }
-   0.515695381s  INFO prepare_target{force=false package_id=glib-sys v0.18.1 target="glib_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "build_script_build", old_fingerprint: 15534860290302859081, new_name: "build_script_build", new_fingerprint: 6978879176956404354 }
-   0.515945820s  INFO prepare_target{force=false package_id=glib-sys v0.18.1 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint dirty for glib-sys v0.18.1/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/glib-sys-0.18.1/build.rs", Edition2021) }
-   0.515952513s  INFO prepare_target{force=false package_id=glib-sys v0.18.1 target="build-script-build"}: cargo::core::compiler::fingerprint:     dirty: EnvVarChanged { name: "PKG_CONFIG", old_value: Some("pkg-config"), new_value: None }
-   0.516251408s  INFO prepare_target{force=false package_id=gobject-sys v0.18.0 target="gobject_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for gobject-sys v0.18.0/Check { test: false }/TargetInner { ..: lib_target("gobject_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gobject-sys-0.18.0/src/lib.rs", Edition2021) }
-   0.516258171s  INFO prepare_target{force=false package_id=gobject-sys v0.18.0 target="gobject_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "glib", old_fingerprint: 16343238811162793629, new_name: "glib", new_fingerprint: 12541696700823971472 }
-   0.516480303s  INFO prepare_target{force=false package_id=gobject-sys v0.18.0 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint dirty for gobject-sys v0.18.0/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gobject-sys-0.18.0/build.rs", Edition2021) }
-   0.516486090s  INFO prepare_target{force=false package_id=gobject-sys v0.18.0 target="build-script-build"}: cargo::core::compiler::fingerprint:     dirty: EnvVarChanged { name: "PKG_CONFIG", old_value: Some("pkg-config"), new_value: None }
-   0.516791260s  INFO prepare_target{force=false package_id=glib v0.18.5 target="glib"}: cargo::core::compiler::fingerprint: fingerprint dirty for glib v0.18.5/Check { test: false }/TargetInner { ..: lib_target("glib", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/glib-0.18.5/src/lib.rs", Edition2021) }
-   0.516797953s  INFO prepare_target{force=false package_id=glib v0.18.5 target="glib"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "ffi", old_fingerprint: 16343238811162793629, new_name: "ffi", new_fingerprint: 12541696700823971472 }
-   0.518284760s  INFO prepare_target{force=false package_id=gio-sys v0.18.1 target="gio_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for gio-sys v0.18.1/Check { test: false }/TargetInner { ..: lib_target("gio_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gio-sys-0.18.1/src/lib.rs", Edition2021) }
-   0.518295148s  INFO prepare_target{force=false package_id=gio-sys v0.18.1 target="gio_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "glib", old_fingerprint: 16343238811162793629, new_name: "glib", new_fingerprint: 12541696700823971472 }
-   0.518627858s  INFO prepare_target{force=false package_id=gio-sys v0.18.1 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint dirty for gio-sys v0.18.1/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gio-sys-0.18.1/build.rs", Edition2021) }
-   0.518635946s  INFO prepare_target{force=false package_id=gio-sys v0.18.1 target="build-script-build"}: cargo::core::compiler::fingerprint:     dirty: EnvVarChanged { name: "PKG_CONFIG", old_value: Some("pkg-config"), new_value: None }
-   0.519591127s  INFO prepare_target{force=false package_id=cairo-rs v0.18.5 target="cairo"}: cargo::core::compiler::fingerprint: fingerprint dirty for cairo-rs v0.18.5/Check { test: false }/TargetInner { ..: lib_target("cairo", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cairo-rs-0.18.5/src/lib.rs", Edition2021) }
-   0.519599563s  INFO prepare_target{force=false package_id=cairo-rs v0.18.5 target="cairo"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "ffi", old_fingerprint: 15352525109681352526, new_name: "ffi", new_fingerprint: 16429418561501181063 }
-   0.520046407s  INFO prepare_target{force=false package_id=cairo-sys-rs v0.18.2 target="cairo_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for cairo-sys-rs v0.18.2/Check { test: false }/TargetInner { ..: lib_target("cairo_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cairo-sys-rs-0.18.2/src/lib.rs", Edition2021) }
-   0.520054425s  INFO prepare_target{force=false package_id=cairo-sys-rs v0.18.2 target="cairo_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "build_script_build", old_fingerprint: 920254418499011053, new_name: "build_script_build", new_fingerprint: 11550655760639553230 }
-   0.520315810s  INFO prepare_target{force=false package_id=cairo-sys-rs v0.18.2 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint dirty for cairo-sys-rs v0.18.2/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cairo-sys-rs-0.18.2/build.rs", Edition2021) }
-   0.520322573s  INFO prepare_target{force=false package_id=cairo-sys-rs v0.18.2 target="build-script-build"}: cargo::core::compiler::fingerprint:     dirty: EnvVarChanged { name: "PKG_CONFIG", old_value: Some("pkg-config"), new_value: None }
-   0.520993431s  INFO prepare_target{force=false package_id=gdk v0.18.2 target="gdk"}: cargo::core::compiler::fingerprint: fingerprint dirty for gdk v0.18.2/Check { test: false }/TargetInner { ..: lib_target("gdk", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gdk-0.18.2/src/lib.rs", Edition2021) }
-   0.521001449s  INFO prepare_target{force=false package_id=gdk v0.18.2 target="gdk"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "pango", old_fingerprint: 5209305626937847714, new_name: "pango", new_fingerprint: 10147915413411200177 }
-   0.521812168s  INFO prepare_target{force=false package_id=gdk-pixbuf v0.18.5 target="gdk_pixbuf"}: cargo::core::compiler::fingerprint: fingerprint dirty for gdk-pixbuf v0.18.5/Check { test: false }/TargetInner { ..: lib_target("gdk_pixbuf", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gdk-pixbuf-0.18.5/src/lib.rs", Edition2021) }
-   0.521875614s  INFO prepare_target{force=false package_id=gdk-pixbuf v0.18.5 target="gdk_pixbuf"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "ffi", old_fingerprint: 1793934809386881789, new_name: "ffi", new_fingerprint: 5234924794122265259 }
-   0.524802513s  INFO prepare_target{force=false package_id=gdk-pixbuf-sys v0.18.0 target="gdk_pixbuf_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for gdk-pixbuf-sys v0.18.0/Check { test: false }/TargetInner { ..: lib_target("gdk_pixbuf_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gdk-pixbuf-sys-0.18.0/src/lib.rs", Edition2021) }
-   0.524871955s  INFO prepare_target{force=false package_id=gdk-pixbuf-sys v0.18.0 target="gdk_pixbuf_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "build_script_build", old_fingerprint: 4977102979823648980, new_name: "build_script_build", new_fingerprint: 8283835340699000195 }
-   0.527640726s  INFO prepare_target{force=false package_id=gdk-pixbuf-sys v0.18.0 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint dirty for gdk-pixbuf-sys v0.18.0/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gdk-pixbuf-sys-0.18.0/build.rs", Edition2021) }
-   0.527714840s  INFO prepare_target{force=false package_id=gdk-pixbuf-sys v0.18.0 target="build-script-build"}: cargo::core::compiler::fingerprint:     dirty: EnvVarChanged { name: "PKG_CONFIG", old_value: Some("pkg-config"), new_value: None }
-   0.529245570s  INFO prepare_target{force=false package_id=gio v0.18.4 target="gio"}: cargo::core::compiler::fingerprint: fingerprint dirty for gio v0.18.4/Check { test: false }/TargetInner { ..: lib_target("gio", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gio-0.18.4/src/lib.rs", Edition2021) }
-   0.529312573s  INFO prepare_target{force=false package_id=gio v0.18.4 target="gio"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "glib", old_fingerprint: 1227061215697929894, new_name: "glib", new_fingerprint: 8441912560985472617 }
-   0.534235870s  INFO prepare_target{force=false package_id=gdk-sys v0.18.2 target="gdk_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for gdk-sys v0.18.2/Check { test: false }/TargetInner { ..: lib_target("gdk_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gdk-sys-0.18.2/src/lib.rs", Edition2021) }
-   0.534314446s  INFO prepare_target{force=false package_id=gdk-sys v0.18.2 target="gdk_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "gdk_pixbuf", old_fingerprint: 1793934809386881789, new_name: "gdk_pixbuf", new_fingerprint: 5234924794122265259 }
-   0.537731764s  INFO prepare_target{force=false package_id=gdk-sys v0.18.2 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint dirty for gdk-sys v0.18.2/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gdk-sys-0.18.2/build.rs", Edition2021) }
-   0.537806993s  INFO prepare_target{force=false package_id=gdk-sys v0.18.2 target="build-script-build"}: cargo::core::compiler::fingerprint:     dirty: EnvVarChanged { name: "PKG_CONFIG", old_value: Some("pkg-config"), new_value: None }
-   0.538928251s  INFO prepare_target{force=false package_id=pango-sys v0.18.0 target="pango_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for pango-sys v0.18.0/Check { test: false }/TargetInner { ..: lib_target("pango_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pango-sys-0.18.0/src/lib.rs", Edition2021) }
-   0.539018889s  INFO prepare_target{force=false package_id=pango-sys v0.18.0 target="pango_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "build_script_build", old_fingerprint: 5254303015399103952, new_name: "build_script_build", new_fingerprint: 10436760471995444268 }
-   0.540292836s  INFO prepare_target{force=false package_id=pango-sys v0.18.0 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint dirty for pango-sys v0.18.0/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pango-sys-0.18.0/build.rs", Edition2021) }
-   0.540319260s  INFO prepare_target{force=false package_id=pango-sys v0.18.0 target="build-script-build"}: cargo::core::compiler::fingerprint:     dirty: EnvVarChanged { name: "PKG_CONFIG", old_value: Some("pkg-config"), new_value: None }
-   0.540901990s  INFO prepare_target{force=false package_id=pango v0.18.3 target="pango"}: cargo::core::compiler::fingerprint: fingerprint dirty for pango v0.18.3/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("pango", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pango-0.18.3/src/lib.rs", Edition2021) }
-   0.540930088s  INFO prepare_target{force=false package_id=pango v0.18.3 target="pango"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "ffi", old_fingerprint: 18423138328268966066, new_name: "ffi", new_fingerprint: 7504308913764321475 }
-   0.541991315s  INFO prepare_target{force=false package_id=gtk v0.18.2 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint dirty for gtk v0.18.2/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gtk-0.18.2/build.rs", Edition2021) }
-   0.542012371s  INFO prepare_target{force=false package_id=gtk v0.18.2 target="build-script-build"}: cargo::core::compiler::fingerprint:     dirty: EnvVarChanged { name: "PKG_CONFIG", old_value: Some("pkg-config"), new_value: None }
-   0.542493378s  INFO prepare_target{force=false package_id=gtk-sys v0.18.2 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint dirty for gtk-sys v0.18.2/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gtk-sys-0.18.2/build.rs", Edition2021) }
-   0.542508089s  INFO prepare_target{force=false package_id=gtk-sys v0.18.2 target="build-script-build"}: cargo::core::compiler::fingerprint:     dirty: EnvVarChanged { name: "PKG_CONFIG", old_value: Some("pkg-config"), new_value: None }
-   0.543015521s  INFO prepare_target{force=false package_id=gtk-sys v0.18.2 target="gtk_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for gtk-sys v0.18.2/Check { test: false }/TargetInner { ..: lib_target("gtk_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gtk-sys-0.18.2/src/lib.rs", Edition2021) }
-   0.543033648s  INFO prepare_target{force=false package_id=gtk-sys v0.18.2 target="gtk_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "gdk_pixbuf", old_fingerprint: 1793934809386881789, new_name: "gdk_pixbuf", new_fingerprint: 5234924794122265259 }
-   0.544848563s  INFO prepare_target{force=false package_id=muda v0.17.1 target="muda"}: cargo::core::compiler::fingerprint: fingerprint dirty for muda v0.17.1/Check { test: false }/TargetInner { ..: lib_target("muda", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/muda-0.17.1/src/lib.rs", Edition2021) }
-   0.544864877s  INFO prepare_target{force=false package_id=muda v0.17.1 target="muda"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "gtk", old_fingerprint: 11156024595475960767, new_name: "gtk", new_fingerprint: 8339026696334415947 }
-   0.548821838s  INFO prepare_target{force=false package_id=tauri-runtime v2.9.1 target="tauri_runtime"}: cargo::core::compiler::fingerprint: fingerprint dirty for tauri-runtime v2.9.1/Check { test: false }/TargetInner { ..: lib_target("tauri_runtime", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-runtime-2.9.1/src/lib.rs", Edition2021) }
-   0.548836968s  INFO prepare_target{force=false package_id=tauri-runtime v2.9.1 target="tauri_runtime"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "webkit2gtk", old_fingerprint: 2105183306479314559, new_name: "webkit2gtk", new_fingerprint: 8800973627547555345 }
-   0.555987651s  INFO prepare_target{force=false package_id=webkit2gtk v2.0.1 target="webkit2gtk"}: cargo::core::compiler::fingerprint: fingerprint dirty for webkit2gtk v2.0.1/Check { test: false }/TargetInner { ..: lib_target("webkit2gtk", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/webkit2gtk-2.0.1/src/lib.rs", Edition2021) }
-   0.556009195s  INFO prepare_target{force=false package_id=webkit2gtk v2.0.1 target="webkit2gtk"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "java_script_core", old_fingerprint: 17689284129601825171, new_name: "java_script_core", new_fingerprint: 2543200976934388332 }
-   0.556845153s  INFO prepare_target{force=false package_id=javascriptcore-rs v1.1.2 target="javascriptcore"}: cargo::core::compiler::fingerprint: fingerprint dirty for javascriptcore-rs v1.1.2/Check { test: false }/TargetInner { ..: lib_target("javascriptcore", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/javascriptcore-rs-1.1.2/src/lib.rs", Edition2021) }
-   0.556853171s  INFO prepare_target{force=false package_id=javascriptcore-rs v1.1.2 target="javascriptcore"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "glib", old_fingerprint: 1227061215697929894, new_name: "glib", new_fingerprint: 8441912560985472617 }
-   0.557268082s  INFO prepare_target{force=false package_id=javascriptcore-rs-sys v1.1.1 target="javascriptcore_rs_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for javascriptcore-rs-sys v1.1.1/Check { test: false }/TargetInner { ..: lib_target("javascriptcore_rs_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/javascriptcore-rs-sys-1.1.1/src/lib.rs", Edition2021) }
-   0.557275682s  INFO prepare_target{force=false package_id=javascriptcore-rs-sys v1.1.1 target="javascriptcore_rs_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "build_script_build", old_fingerprint: 5321870425993560762, new_name: "build_script_build", new_fingerprint: 4152164173258121396 }
-   0.557507017s  INFO prepare_target{force=false package_id=javascriptcore-rs-sys v1.1.1 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint dirty for javascriptcore-rs-sys v1.1.1/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/javascriptcore-rs-sys-1.1.1/build.rs", Edition2021) }
-   0.557513222s  INFO prepare_target{force=false package_id=javascriptcore-rs-sys v1.1.1 target="build-script-build"}: cargo::core::compiler::fingerprint:     dirty: EnvVarChanged { name: "PKG_CONFIG", old_value: Some("pkg-config"), new_value: None }
-   0.557803193s  INFO prepare_target{force=false package_id=soup3 v0.5.0 target="soup"}: cargo::core::compiler::fingerprint: fingerprint dirty for soup3 v0.5.0/Check { test: false }/TargetInner { ..: lib_target("soup", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/soup3-0.5.0/src/lib.rs", Edition2021) }
-   0.557809398s  INFO prepare_target{force=false package_id=soup3 v0.5.0 target="soup"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "glib", old_fingerprint: 1227061215697929894, new_name: "glib", new_fingerprint: 8441912560985472617 }
-   0.558227098s  INFO prepare_target{force=false package_id=soup3-sys v0.5.0 target="soup3_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for soup3-sys v0.5.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("soup3_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/soup3-sys-0.5.0/src/lib.rs", Edition2021) }
-   0.558234140s  INFO prepare_target{force=false package_id=soup3-sys v0.5.0 target="soup3_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "glib", old_fingerprint: 16343238811162793629, new_name: "glib", new_fingerprint: 12541696700823971472 }
-   0.558462337s  INFO prepare_target{force=false package_id=soup3-sys v0.5.0 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint dirty for soup3-sys v0.5.0/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/soup3-sys-0.5.0/build.rs", Edition2021) }
-   0.558468055s  INFO prepare_target{force=false package_id=soup3-sys v0.5.0 target="build-script-build"}: cargo::core::compiler::fingerprint:     dirty: EnvVarChanged { name: "PKG_CONFIG", old_value: Some("pkg-config"), new_value: None }
-   0.558698762s  INFO prepare_target{force=false package_id=webkit2gtk-sys v2.0.1 target="webkit2gtk_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for webkit2gtk-sys v2.0.1/Check { test: false }/TargetInner { ..: lib_target("webkit2gtk_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/webkit2gtk-sys-2.0.1/src/lib.rs", Edition2018) }
-   0.558705734s  INFO prepare_target{force=false package_id=webkit2gtk-sys v2.0.1 target="webkit2gtk_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "cairo", old_fingerprint: 15352525109681352526, new_name: "cairo", new_fingerprint: 16429418561501181063 }
-   0.559064938s  INFO prepare_target{force=false package_id=webkit2gtk-sys v2.0.1 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint dirty for webkit2gtk-sys v2.0.1/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/webkit2gtk-sys-2.0.1/build.rs", Edition2018) }
-   0.559071213s  INFO prepare_target{force=false package_id=webkit2gtk-sys v2.0.1 target="build-script-build"}: cargo::core::compiler::fingerprint:     dirty: EnvVarChanged { name: "PKG_CONFIG", old_value: Some("pkg-config"), new_value: None }
-   0.559297947s  INFO prepare_target{force=false package_id=tauri-runtime-wry v2.9.1 target="tauri_runtime_wry"}: cargo::core::compiler::fingerprint: fingerprint dirty for tauri-runtime-wry v2.9.1/Check { test: false }/TargetInner { ..: lib_target("tauri_runtime_wry", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-runtime-wry-2.9.1/src/lib.rs", Edition2021) }
-   0.559304640s  INFO prepare_target{force=false package_id=tauri-runtime-wry v2.9.1 target="tauri_runtime_wry"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "webkit2gtk", old_fingerprint: 2105183306479314559, new_name: "webkit2gtk", new_fingerprint: 8800973627547555345 }
-   0.560000668s  INFO prepare_target{force=false package_id=tao v0.34.5 target="tao"}: cargo::core::compiler::fingerprint: fingerprint dirty for tao v0.34.5/Check { test: false }/TargetInner { ..: lib_target("tao", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tao-0.34.5/src/lib.rs", Edition2021) }
-   0.560009174s  INFO prepare_target{force=false package_id=tao v0.34.5 target="tao"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "gtk", old_fingerprint: 11156024595475960767, new_name: "gtk", new_fingerprint: 8339026696334415947 }
-   0.560708617s  INFO prepare_target{force=false package_id=gdkwayland-sys v0.18.2 target="gdk_wayland_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for gdkwayland-sys v0.18.2/Check { test: false }/TargetInner { ..: lib_target("gdk_wayland_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gdkwayland-sys-0.18.2/src/lib.rs", Edition2021) }
-   0.560715729s  INFO prepare_target{force=false package_id=gdkwayland-sys v0.18.2 target="gdk_wayland_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "gdk", old_fingerprint: 9373684436616355796, new_name: "gdk", new_fingerprint: 3556191496450895935 }
-   0.560950411s  INFO prepare_target{force=false package_id=gdkx11-sys v0.18.2 target="gdk_x11_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for gdkx11-sys v0.18.2/Check { test: false }/TargetInner { ..: lib_target("gdk_x11_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gdkx11-sys-0.18.2/src/lib.rs", Edition2021) }
-   0.560955779s  INFO prepare_target{force=false package_id=gdkx11-sys v0.18.2 target="gdk_x11_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "gdk", old_fingerprint: 9373684436616355796, new_name: "gdk", new_fingerprint: 3556191496450895935 }
-   0.561212493s  INFO prepare_target{force=false package_id=gdkx11-sys v0.18.2 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint dirty for gdkx11-sys v0.18.2/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gdkx11-sys-0.18.2/build.rs", Edition2021) }
-   0.561218698s  INFO prepare_target{force=false package_id=gdkx11-sys v0.18.2 target="build-script-build"}: cargo::core::compiler::fingerprint:     dirty: EnvVarChanged { name: "PKG_CONFIG", old_value: Some("pkg-config"), new_value: None }
-   0.562192356s  INFO prepare_target{force=false package_id=x11-dl v2.21.0 target="x11_dl"}: cargo::core::compiler::fingerprint: fingerprint dirty for x11-dl v2.21.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("x11_dl", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/x11-dl-2.21.0/src/lib.rs", Edition2021) }
-   0.562199955s  INFO prepare_target{force=false package_id=x11-dl v2.21.0 target="x11_dl"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "build_script_build", old_fingerprint: 11331858506663245735, new_name: "build_script_build", new_fingerprint: 6995648527509311303 }
-   0.562893054s  INFO prepare_target{force=false package_id=wry v0.53.5 target="wry"}: cargo::core::compiler::fingerprint: fingerprint dirty for wry v0.53.5/Check { test: false }/TargetInner { ..: lib_target("wry", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wry-0.53.5/src/lib.rs", Edition2021) }
-   0.562899748s  INFO prepare_target{force=false package_id=wry v0.53.5 target="wry"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "webkit2gtk", old_fingerprint: 2105183306479314559, new_name: "webkit2gtk", new_fingerprint: 8800973627547555345 }
-   0.563454171s  INFO prepare_target{force=false package_id=gdkx11 v0.18.2 target="gdkx11"}: cargo::core::compiler::fingerprint: fingerprint dirty for gdkx11 v0.18.2/Check { test: false }/TargetInner { ..: lib_target("gdkx11", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gdkx11-0.18.2/src/lib.rs", Edition2021) }
-   0.563461213s  INFO prepare_target{force=false package_id=gdkx11 v0.18.2 target="gdkx11"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "gdk", old_fingerprint: 12540813046470263897, new_name: "gdk", new_fingerprint: 12836887264675313674 }
-   0.563727897s  INFO prepare_target{force=false package_id=wry v0.53.5 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint dirty for wry v0.53.5/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wry-0.53.5/build.rs", Edition2021) }
-   0.563733753s  INFO prepare_target{force=false package_id=wry v0.53.5 target="build-script-build"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "build_script_build", old_fingerprint: 6208910727747865891, new_name: "build_script_build", new_fingerprint: 3644061843876268169 }
-   0.564111573s  INFO prepare_target{force=false package_id=tauri-plugin-opener v2.5.2 target="tauri_plugin_opener"}: cargo::core::compiler::fingerprint: fingerprint dirty for tauri-plugin-opener v2.5.2/Check { test: false }/TargetInner { ..: lib_target("tauri_plugin_opener", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-plugin-opener-2.5.2/src/lib.rs", Edition2021) }
-   0.564118824s  INFO prepare_target{force=false package_id=tauri-plugin-opener v2.5.2 target="tauri_plugin_opener"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "tauri", old_fingerprint: 14839615404367463863, new_name: "tauri", new_fingerprint: 10162384015068009289 }
-   0.570037393s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat_lib"}: cargo::core::compiler::fingerprint: fingerprint dirty for ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri)/Check { test: true }/TargetInner { ..: lib_target("ezchat_lib", ["staticlib", "cdylib", "rlib"], "/home/ezy/_projects/Tauri/ezchat/src-tauri/src/lib.rs", Edition2021) }
-   0.570062213s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat_lib"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "tauri", old_fingerprint: 14839615404367463863, new_name: "tauri", new_fingerprint: 10162384015068009289 }
-   0.571530055s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat"}: cargo::core::compiler::fingerprint: fingerprint dirty for ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri)/Check { test: false }/TargetInner { name: "ezchat", doc: true, ..: with_path("/home/ezy/_projects/Tauri/ezchat/src-tauri/src/main.rs", Edition2021) }
-   0.571541838s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "tauri", old_fingerprint: 14839615404367463863, new_name: "tauri", new_fingerprint: 10162384015068009289 }
-   0.572819411s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat"}: cargo::core::compiler::fingerprint: fingerprint dirty for ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri)/Check { test: true }/TargetInner { name: "ezchat", doc: true, ..: with_path("/home/ezy/_projects/Tauri/ezchat/src-tauri/src/main.rs", Edition2021) }
-   0.572832239s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "tauri", old_fingerprint: 14839615404367463863, new_name: "tauri", new_fingerprint: 10162384015068009289 }
-   Compiling glib-sys v0.18.1
-   Compiling gobject-sys v0.18.0
-   Compiling gio-sys v0.18.1
-   Compiling gdk-sys v0.18.2
-   Compiling gdk-pixbuf-sys v0.18.0
-   Compiling cairo-sys-rs v0.18.2
-   Compiling pango-sys v0.18.0
-   Compiling atk-sys v0.18.2
-warning: glib-sys@0.18.1: Could not run `PKG_CONFIG_PATH=/usr/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags glib-2.0 'glib-2.0 >= 2.70'`
-error: failed to run custom build command for `glib-sys v0.18.1`
-note: To improve backtraces for build dependencies, set the CARGO_PROFILE_DEV_BUILD_OVERRIDE_DEBUG=true environment variable to enable debug information generation.
-
-Caused by:
-  process didn't exit successfully: `/home/ezy/_projects/Tauri/ezchat/src-tauri/target/debug/build/glib-sys-115f135792f1bacf/build-script-build` (exit status: 1)
-  --- stdout
-  cargo:rerun-if-env-changed=GLIB_2.0_NO_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-  cargo:warning=Could not run `PKG_CONFIG_PATH=/usr/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags glib-2.0 'glib-2.0 >= 2.70'`
-  The pkg-config command could not be found.
-
-  Most likely, you need to install a pkg-config package for your OS.
-  Try `apt install pkg-config`, or `yum install pkg-config`, or `brew install pkgconf`
-  or `pkg install pkg-config`, or `apk add pkgconfig` depending on your distribution.
-
-  If you've already installed it, ensure the pkg-config command is one of the
-  directories in the PATH environment variable.
-
-  If you did not expect this build to link to a pre-installed system library,
-  then check documentation of the glib-sys crate for an option to
-  build the library from source, or disable features or dependencies
-  that require pkg-config.
-warning: build failed, waiting for other jobs to finish...
-warning: cairo-sys-rs@0.18.2: Could not run `PKG_CONFIG_PATH=/usr/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags cairo 'cairo >= 1.14'`
-error: failed to run custom build command for `cairo-sys-rs v0.18.2`
-note: To improve backtraces for build dependencies, set the CARGO_PROFILE_DEV_BUILD_OVERRIDE_DEBUG=true environment variable to enable debug information generation.
-
-Caused by:
-  process didn't exit successfully: `/home/ezy/_projects/Tauri/ezchat/src-tauri/target/debug/build/cairo-sys-rs-f19d4020c8de58a9/build-script-build` (exit status: 1)
-  --- stdout
-  cargo:rerun-if-env-changed=CAIRO_NO_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-  cargo:warning=Could not run `PKG_CONFIG_PATH=/usr/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags cairo 'cairo >= 1.14'`
-  The pkg-config command could not be found.
-
-  Most likely, you need to install a pkg-config package for your OS.
-  Try `apt install pkg-config`, or `yum install pkg-config`, or `brew install pkgconf`
-  or `pkg install pkg-config`, or `apk add pkgconfig` depending on your distribution.
-
-  If you've already installed it, ensure the pkg-config command is one of the
-  directories in the PATH environment variable.
-
-  If you did not expect this build to link to a pre-installed system library,
-  then check documentation of the cairo-sys-rs crate for an option to
-  build the library from source, or disable features or dependencies
-  that require pkg-config.
-warning: gdk-pixbuf-sys@0.18.0: Could not run `PKG_CONFIG_PATH=/usr/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags gdk-pixbuf-2.0 'gdk-pixbuf-2.0 >= 2.36.8'`
-error: failed to run custom build command for `gdk-pixbuf-sys v0.18.0`
-note: To improve backtraces for build dependencies, set the CARGO_PROFILE_DEV_BUILD_OVERRIDE_DEBUG=true environment variable to enable debug information generation.
-
-Caused by:
-  process didn't exit successfully: `/home/ezy/_projects/Tauri/ezchat/src-tauri/target/debug/build/gdk-pixbuf-sys-c73b846d2f41c967/build-script-build` (exit status: 1)
-  --- stdout
-  cargo:rerun-if-env-changed=GDK_PIXBUF_2.0_NO_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-  cargo:warning=Could not run `PKG_CONFIG_PATH=/usr/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags gdk-pixbuf-2.0 'gdk-pixbuf-2.0 >= 2.36.8'`
-  The pkg-config command could not be found.
-
-  Most likely, you need to install a pkg-config package for your OS.
-  Try `apt install pkg-config`, or `yum install pkg-config`, or `brew install pkgconf`
-  or `pkg install pkg-config`, or `apk add pkgconfig` depending on your distribution.
-
-  If you've already installed it, ensure the pkg-config command is one of the
-  directories in the PATH environment variable.
-
-  If you did not expect this build to link to a pre-installed system library,
-  then check documentation of the gdk-pixbuf-sys crate for an option to
-  build the library from source, or disable features or dependencies
-  that require pkg-config.
-warning: gobject-sys@0.18.0: Could not run `PKG_CONFIG_PATH=/usr/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags gobject-2.0 'gobject-2.0 >= 2.70'`
-error: failed to run custom build command for `gobject-sys v0.18.0`
-note: To improve backtraces for build dependencies, set the CARGO_PROFILE_DEV_BUILD_OVERRIDE_DEBUG=true environment variable to enable debug information generation.
-
-Caused by:
-  process didn't exit successfully: `/home/ezy/_projects/Tauri/ezchat/src-tauri/target/debug/build/gobject-sys-e63aa63119fb3739/build-script-build` (exit status: 1)
-  --- stdout
-  cargo:rerun-if-env-changed=GOBJECT_2.0_NO_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-  cargo:warning=Could not run `PKG_CONFIG_PATH=/usr/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags gobject-2.0 'gobject-2.0 >= 2.70'`
-  The pkg-config command could not be found.
-
-  Most likely, you need to install a pkg-config package for your OS.
-  Try `apt install pkg-config`, or `yum install pkg-config`, or `brew install pkgconf`
-  or `pkg install pkg-config`, or `apk add pkgconfig` depending on your distribution.
-
-  If you've already installed it, ensure the pkg-config command is one of the
-  directories in the PATH environment variable.
-
-  If you did not expect this build to link to a pre-installed system library,
-  then check documentation of the gobject-sys crate for an option to
-  build the library from source, or disable features or dependencies
-  that require pkg-config.
-error: failed to run custom build command for `gdk-sys v0.18.2`
-note: To improve backtraces for build dependencies, set the CARGO_PROFILE_DEV_BUILD_OVERRIDE_DEBUG=true environment variable to enable debug information generation.
-
-Caused by:
-  process didn't exit successfully: `/home/ezy/_projects/Tauri/ezchat/src-tauri/target/debug/build/gdk-sys-ae92751603cfd2f9/build-script-build` (exit status: 1)
-  --- stdout
-  cargo:rerun-if-env-changed=GDK_3.0_NO_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-
-  --- stderr
-  Could not run `PKG_CONFIG_PATH=/usr/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags gdk-3.0 'gdk-3.0 >= 3.22'`
-  The pkg-config command could not be found.
-
-  Most likely, you need to install a pkg-config package for your OS.
-  Try `apt install pkg-config`, or `yum install pkg-config`, or `brew install pkgconf`
-  or `pkg install pkg-config`, or `apk add pkgconfig` depending on your distribution.
-
-  If you've already installed it, ensure the pkg-config command is one of the
-  directories in the PATH environment variable.
-
-  If you did not expect this build to link to a pre-installed system library,
-  then check documentation of the gdk-sys crate for an option to
-  build the library from source, or disable features or dependencies
-  that require pkg-config.
-warning: gio-sys@0.18.1: Could not run `PKG_CONFIG_PATH=/usr/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags gio-2.0 'gio-2.0 >= 2.70'`
-error: failed to run custom build command for `gio-sys v0.18.1`
-note: To improve backtraces for build dependencies, set the CARGO_PROFILE_DEV_BUILD_OVERRIDE_DEBUG=true environment variable to enable debug information generation.
-
-Caused by:
-  process didn't exit successfully: `/home/ezy/_projects/Tauri/ezchat/src-tauri/target/debug/build/gio-sys-99265a86f24d7bd2/build-script-build` (exit status: 1)
-  --- stdout
-  cargo:rerun-if-env-changed=GIO_2.0_NO_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-  cargo:warning=Could not run `PKG_CONFIG_PATH=/usr/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags gio-2.0 'gio-2.0 >= 2.70'`
-  The pkg-config command could not be found.
-
-  Most likely, you need to install a pkg-config package for your OS.
-  Try `apt install pkg-config`, or `yum install pkg-config`, or `brew install pkgconf`
-  or `pkg install pkg-config`, or `apk add pkgconfig` depending on your distribution.
-
-  If you've already installed it, ensure the pkg-config command is one of the
-  directories in the PATH environment variable.
-
-  If you did not expect this build to link to a pre-installed system library,
-  then check documentation of the gio-sys crate for an option to
-  build the library from source, or disable features or dependencies
-  that require pkg-config.
-   Compiling javascriptcore-rs-sys v1.1.1
-   Compiling soup3-sys v0.5.0
-warning: pango-sys@0.18.0: Could not run `PKG_CONFIG_PATH=/usr/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags pango 'pango >= 1.40'`
-error: failed to run custom build command for `pango-sys v0.18.0`
-note: To improve backtraces for build dependencies, set the CARGO_PROFILE_DEV_BUILD_OVERRIDE_DEBUG=true environment variable to enable debug information generation.
-
-Caused by:
-  process didn't exit successfully: `/home/ezy/_projects/Tauri/ezchat/src-tauri/target/debug/build/pango-sys-4808c44a8921a9bd/build-script-build` (exit status: 1)
-  --- stdout
-  cargo:rerun-if-env-changed=PANGO_NO_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-  cargo:warning=Could not run `PKG_CONFIG_PATH=/usr/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags pango 'pango >= 1.40'`
-  The pkg-config command could not be found.
-
-  Most likely, you need to install a pkg-config package for your OS.
-  Try `apt install pkg-config`, or `yum install pkg-config`, or `brew install pkgconf`
-  or `pkg install pkg-config`, or `apk add pkgconfig` depending on your distribution.
-
-  If you've already installed it, ensure the pkg-config command is one of the
-  directories in the PATH environment variable.
-
-  If you did not expect this build to link to a pre-installed system library,
-  then check documentation of the pango-sys crate for an option to
-  build the library from source, or disable features or dependencies
-  that require pkg-config.
-warning: atk-sys@0.18.2: Could not run `PKG_CONFIG_PATH=/usr/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags atk 'atk >= 2.28'`
-error: failed to run custom build command for `atk-sys v0.18.2`
-note: To improve backtraces for build dependencies, set the CARGO_PROFILE_DEV_BUILD_OVERRIDE_DEBUG=true environment variable to enable debug information generation.
-
-Caused by:
-  process didn't exit successfully: `/home/ezy/_projects/Tauri/ezchat/src-tauri/target/debug/build/atk-sys-d2ba35ab74dff894/build-script-build` (exit status: 1)
-  --- stdout
-  cargo:rerun-if-env-changed=ATK_NO_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-  cargo:warning=Could not run `PKG_CONFIG_PATH=/usr/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags atk 'atk >= 2.28'`
-  The pkg-config command could not be found.
-
-  Most likely, you need to install a pkg-config package for your OS.
-  Try `apt install pkg-config`, or `yum install pkg-config`, or `brew install pkgconf`
-  or `pkg install pkg-config`, or `apk add pkgconfig` depending on your distribution.
-
-  If you've already installed it, ensure the pkg-config command is one of the
-  directories in the PATH environment variable.
-
-  If you did not expect this build to link to a pre-installed system library,
-  then check documentation of the atk-sys crate for an option to
-  build the library from source, or disable features or dependencies
-  that require pkg-config.
-warning: javascriptcore-rs-sys@1.1.1: Could not run `PKG_CONFIG_PATH=/usr/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags javascriptcoregtk-4.1 'javascriptcoregtk-4.1 >= 2.38'`
-error: failed to run custom build command for `javascriptcore-rs-sys v1.1.1`
-note: To improve backtraces for build dependencies, set the CARGO_PROFILE_DEV_BUILD_OVERRIDE_DEBUG=true environment variable to enable debug information generation.
-
-Caused by:
-  process didn't exit successfully: `/home/ezy/_projects/Tauri/ezchat/src-tauri/target/debug/build/javascriptcore-rs-sys-a8e91a3ed049f639/build-script-build` (exit status: 1)
-  --- stdout
-  cargo:rerun-if-env-changed=JAVASCRIPTCOREGTK_4.1_NO_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-  cargo:warning=Could not run `PKG_CONFIG_PATH=/usr/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags javascriptcoregtk-4.1 'javascriptcoregtk-4.1 >= 2.38'`
-  The pkg-config command could not be found.
-
-  Most likely, you need to install a pkg-config package for your OS.
-  Try `apt install pkg-config`, or `yum install pkg-config`, or `brew install pkgconf`
-  or `pkg install pkg-config`, or `apk add pkgconfig` depending on your distribution.
-
-  If you've already installed it, ensure the pkg-config command is one of the
-  directories in the PATH environment variable.
-
-  If you did not expect this build to link to a pre-installed system library,
-  then check documentation of the javascriptcore-rs-sys crate for an option to
-  build the library from source, or disable features or dependencies
-  that require pkg-config.
+   0.660722424s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat_lib"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 1761777234.219822032s > 1761672342.894697591s "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/glib-sys-0.18.1"
+   0.661595268s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat_lib"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 1761777234.206821624s > 1761672344.351083970s "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/atk-sys-0.18.2"
+   0.670134926s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat_lib"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 1761777234.236822566s > 1761672343.394180655s "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cairo-sys-rs-0.18.2"
+   0.671492560s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat_lib"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 1761777234.219822032s > 1761672346.243412987s "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gdk-pixbuf-sys-0.18.0"
+   0.672337746s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat_lib"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 1761777234.220822064s > 1761672344.238531886s "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pango-sys-0.18.0"
+   0.684272676s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat_lib"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 1761777234.220822064s > 1761672344.079761918s "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/javascriptcore-rs-sys-1.1.1"
+   0.685869108s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat_lib"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 1761756859.567015529s > 1761756782.469708049s "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/x11-dl-2.21.0"
+   0.708333281s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat_lib"}: cargo::core::compiler::fingerprint: fingerprint dirty for ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri)/Check { test: false }/TargetInner { ..: lib_target("ezchat_lib", ["staticlib", "cdylib", "rlib"], "/home/ezy/_projects/Tauri/ezchat/src-tauri/src/lib.rs", Edition2021) }
+   0.708381963s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat_lib"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "tauri", old_fingerprint: 14839615404367463863, new_name: "tauri", new_fingerprint: 14798823276034457743 }
+   0.737420653s  INFO prepare_target{force=false package_id=tauri v2.9.1 target="tauri"}: cargo::core::compiler::fingerprint: fingerprint dirty for tauri v2.9.1/Check { test: false }/TargetInner { ..: lib_target("tauri", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-2.9.1/src/lib.rs", Edition2021) }
+   0.737570539s  INFO prepare_target{force=false package_id=tauri v2.9.1 target="tauri"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "webkit2gtk", old_fingerprint: 2105183306479314559, new_name: "webkit2gtk", new_fingerprint: 8401178837475488170 }
+   0.745401207s  INFO prepare_target{force=false package_id=gtk v0.18.2 target="gtk"}: cargo::core::compiler::fingerprint: fingerprint dirty for gtk v0.18.2/Check { test: false }/TargetInner { ..: lib_target("gtk", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gtk-0.18.2/src/lib.rs", Edition2021) }
+   0.745449679s  INFO prepare_target{force=false package_id=gtk v0.18.2 target="gtk"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "gdk", old_fingerprint: 12540813046470263897, new_name: "gdk", new_fingerprint: 12889217987224388274 }
+   0.746336632s  INFO prepare_target{force=false package_id=atk v0.18.2 target="atk"}: cargo::core::compiler::fingerprint: fingerprint dirty for atk v0.18.2/Check { test: false }/TargetInner { ..: lib_target("atk", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/atk-0.18.2/src/lib.rs", Edition2021) }
+   0.746360379s  INFO prepare_target{force=false package_id=atk v0.18.2 target="atk"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "ffi", old_fingerprint: 9018912665185810048, new_name: "ffi", new_fingerprint: 11512764289370641318 }
+   0.746961250s  INFO prepare_target{force=false package_id=atk-sys v0.18.2 target="atk_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for atk-sys v0.18.2/Check { test: false }/TargetInner { ..: lib_target("atk_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/atk-sys-0.18.2/src/lib.rs", Edition2021) }
+   0.746985695s  INFO prepare_target{force=false package_id=atk-sys v0.18.2 target="atk_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "glib", old_fingerprint: 16343238811162793629, new_name: "glib", new_fingerprint: 1718885333964629875 }
+   0.748095941s  INFO prepare_target{force=false package_id=glib-sys v0.18.1 target="glib_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for glib-sys v0.18.1/Check { test: false }/TargetInner { ..: lib_target("glib_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/glib-sys-0.18.1/src/lib.rs", Edition2021) }
+   0.748123320s  INFO prepare_target{force=false package_id=glib-sys v0.18.1 target="glib_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "build_script_build", old_fingerprint: 15534860290302859081, new_name: "build_script_build", new_fingerprint: 1458737403391815202 }
+   0.748829376s  INFO prepare_target{force=false package_id=gobject-sys v0.18.0 target="gobject_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for gobject-sys v0.18.0/Check { test: false }/TargetInner { ..: lib_target("gobject_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gobject-sys-0.18.0/src/lib.rs", Edition2021) }
+   0.748848793s  INFO prepare_target{force=false package_id=gobject-sys v0.18.0 target="gobject_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "glib", old_fingerprint: 16343238811162793629, new_name: "glib", new_fingerprint: 1718885333964629875 }
+   0.749488986s  INFO prepare_target{force=false package_id=glib v0.18.5 target="glib"}: cargo::core::compiler::fingerprint: fingerprint dirty for glib v0.18.5/Check { test: false }/TargetInner { ..: lib_target("glib", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/glib-0.18.5/src/lib.rs", Edition2021) }
+   0.749510568s  INFO prepare_target{force=false package_id=glib v0.18.5 target="glib"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "ffi", old_fingerprint: 16343238811162793629, new_name: "ffi", new_fingerprint: 1718885333964629875 }
+   0.751113984s  INFO prepare_target{force=false package_id=gio-sys v0.18.1 target="gio_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for gio-sys v0.18.1/Check { test: false }/TargetInner { ..: lib_target("gio_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gio-sys-0.18.1/src/lib.rs", Edition2021) }
+   0.751141713s  INFO prepare_target{force=false package_id=gio-sys v0.18.1 target="gio_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "glib", old_fingerprint: 16343238811162793629, new_name: "glib", new_fingerprint: 1718885333964629875 }
+   0.752830060s  INFO prepare_target{force=false package_id=cairo-rs v0.18.5 target="cairo"}: cargo::core::compiler::fingerprint: fingerprint dirty for cairo-rs v0.18.5/Check { test: false }/TargetInner { ..: lib_target("cairo", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cairo-rs-0.18.5/src/lib.rs", Edition2021) }
+   0.752884259s  INFO prepare_target{force=false package_id=cairo-rs v0.18.5 target="cairo"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "ffi", old_fingerprint: 15352525109681352526, new_name: "ffi", new_fingerprint: 6808463983441364391 }
+   0.754241125s  INFO prepare_target{force=false package_id=cairo-sys-rs v0.18.2 target="cairo_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for cairo-sys-rs v0.18.2/Check { test: false }/TargetInner { ..: lib_target("cairo_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cairo-sys-rs-0.18.2/src/lib.rs", Edition2021) }
+   0.754559336s  INFO prepare_target{force=false package_id=cairo-sys-rs v0.18.2 target="cairo_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "build_script_build", old_fingerprint: 920254418499011053, new_name: "build_script_build", new_fingerprint: 3322788377901322031 }
+   0.763127699s  INFO prepare_target{force=false package_id=gdk v0.18.2 target="gdk"}: cargo::core::compiler::fingerprint: fingerprint dirty for gdk v0.18.2/Check { test: false }/TargetInner { ..: lib_target("gdk", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gdk-0.18.2/src/lib.rs", Edition2021) }
+   0.763266340s  INFO prepare_target{force=false package_id=gdk v0.18.2 target="gdk"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "pango", old_fingerprint: 5209305626937847714, new_name: "pango", new_fingerprint: 2238237851725576771 }
+   0.768085809s  INFO prepare_target{force=false package_id=gdk-pixbuf v0.18.5 target="gdk_pixbuf"}: cargo::core::compiler::fingerprint: fingerprint dirty for gdk-pixbuf v0.18.5/Check { test: false }/TargetInner { ..: lib_target("gdk_pixbuf", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gdk-pixbuf-0.18.5/src/lib.rs", Edition2021) }
+   0.768219141s  INFO prepare_target{force=false package_id=gdk-pixbuf v0.18.5 target="gdk_pixbuf"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "ffi", old_fingerprint: 1793934809386881789, new_name: "ffi", new_fingerprint: 1236764347995764672 }
+   0.771667845s  INFO prepare_target{force=false package_id=gdk-pixbuf-sys v0.18.0 target="gdk_pixbuf_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for gdk-pixbuf-sys v0.18.0/Check { test: false }/TargetInner { ..: lib_target("gdk_pixbuf_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gdk-pixbuf-sys-0.18.0/src/lib.rs", Edition2021) }
+   0.771750960s  INFO prepare_target{force=false package_id=gdk-pixbuf-sys v0.18.0 target="gdk_pixbuf_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "glib", old_fingerprint: 16343238811162793629, new_name: "glib", new_fingerprint: 1718885333964629875 }
+   0.774172044s  INFO prepare_target{force=false package_id=gio v0.18.4 target="gio"}: cargo::core::compiler::fingerprint: fingerprint dirty for gio v0.18.4/Check { test: false }/TargetInner { ..: lib_target("gio", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gio-0.18.4/src/lib.rs", Edition2021) }
+   0.774216535s  INFO prepare_target{force=false package_id=gio v0.18.4 target="gio"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "glib", old_fingerprint: 1227061215697929894, new_name: "glib", new_fingerprint: 1206247442096398446 }
+   0.776254662s  INFO prepare_target{force=false package_id=gdk-sys v0.18.2 target="gdk_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for gdk-sys v0.18.2/Check { test: false }/TargetInner { ..: lib_target("gdk_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gdk-sys-0.18.2/src/lib.rs", Edition2021) }
+   0.776289026s  INFO prepare_target{force=false package_id=gdk-sys v0.18.2 target="gdk_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "gdk_pixbuf", old_fingerprint: 1793934809386881789, new_name: "gdk_pixbuf", new_fingerprint: 1236764347995764672 }
+   0.777868136s  INFO prepare_target{force=false package_id=pango-sys v0.18.0 target="pango_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for pango-sys v0.18.0/Check { test: false }/TargetInner { ..: lib_target("pango_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pango-sys-0.18.0/src/lib.rs", Edition2021) }
+   0.777902919s  INFO prepare_target{force=false package_id=pango-sys v0.18.0 target="pango_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "glib", old_fingerprint: 16343238811162793629, new_name: "glib", new_fingerprint: 1718885333964629875 }
+   0.779057865s  INFO prepare_target{force=false package_id=pango v0.18.3 target="pango"}: cargo::core::compiler::fingerprint: fingerprint dirty for pango v0.18.3/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("pango", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pango-0.18.3/src/lib.rs", Edition2021) }
+   0.779089784s  INFO prepare_target{force=false package_id=pango v0.18.3 target="pango"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "ffi", old_fingerprint: 18423138328268966066, new_name: "ffi", new_fingerprint: 14130250875211539099 }
+   0.780654157s  INFO prepare_target{force=false package_id=gtk-sys v0.18.2 target="gtk_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for gtk-sys v0.18.2/Check { test: false }/TargetInner { ..: lib_target("gtk_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gtk-sys-0.18.2/src/lib.rs", Edition2021) }
+   0.780692781s  INFO prepare_target{force=false package_id=gtk-sys v0.18.2 target="gtk_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "gdk_pixbuf", old_fingerprint: 1793934809386881789, new_name: "gdk_pixbuf", new_fingerprint: 1236764347995764672 }
+   0.782500841s  INFO prepare_target{force=false package_id=muda v0.17.1 target="muda"}: cargo::core::compiler::fingerprint: fingerprint dirty for muda v0.17.1/Check { test: false }/TargetInner { ..: lib_target("muda", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/muda-0.17.1/src/lib.rs", Edition2021) }
+   0.782529897s  INFO prepare_target{force=false package_id=muda v0.17.1 target="muda"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "gtk", old_fingerprint: 11156024595475960767, new_name: "gtk", new_fingerprint: 5816999163780824561 }
+   0.785965400s  INFO prepare_target{force=false package_id=tauri-runtime v2.9.1 target="tauri_runtime"}: cargo::core::compiler::fingerprint: fingerprint dirty for tauri-runtime v2.9.1/Check { test: false }/TargetInner { ..: lib_target("tauri_runtime", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-runtime-2.9.1/src/lib.rs", Edition2021) }
+   0.786037409s  INFO prepare_target{force=false package_id=tauri-runtime v2.9.1 target="tauri_runtime"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "webkit2gtk", old_fingerprint: 2105183306479314559, new_name: "webkit2gtk", new_fingerprint: 8401178837475488170 }
+   0.809511741s  INFO prepare_target{force=false package_id=webkit2gtk v2.0.1 target="webkit2gtk"}: cargo::core::compiler::fingerprint: fingerprint dirty for webkit2gtk v2.0.1/Check { test: false }/TargetInner { ..: lib_target("webkit2gtk", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/webkit2gtk-2.0.1/src/lib.rs", Edition2021) }
+   0.809557768s  INFO prepare_target{force=false package_id=webkit2gtk v2.0.1 target="webkit2gtk"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "java_script_core", old_fingerprint: 17689284129601825171, new_name: "java_script_core", new_fingerprint: 2357257970064805556 }
+   0.811257500s  INFO prepare_target{force=false package_id=javascriptcore-rs v1.1.2 target="javascriptcore"}: cargo::core::compiler::fingerprint: fingerprint dirty for javascriptcore-rs v1.1.2/Check { test: false }/TargetInner { ..: lib_target("javascriptcore", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/javascriptcore-rs-1.1.2/src/lib.rs", Edition2021) }
+   0.811294238s  INFO prepare_target{force=false package_id=javascriptcore-rs v1.1.2 target="javascriptcore"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "glib", old_fingerprint: 1227061215697929894, new_name: "glib", new_fingerprint: 1206247442096398446 }
+   0.812160238s  INFO prepare_target{force=false package_id=javascriptcore-rs-sys v1.1.1 target="javascriptcore_rs_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for javascriptcore-rs-sys v1.1.1/Check { test: false }/TargetInner { ..: lib_target("javascriptcore_rs_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/javascriptcore-rs-sys-1.1.1/src/lib.rs", Edition2021) }
+   0.812196068s  INFO prepare_target{force=false package_id=javascriptcore-rs-sys v1.1.1 target="javascriptcore_rs_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "glib", old_fingerprint: 16343238811162793629, new_name: "glib", new_fingerprint: 1718885333964629875 }
+   0.813231930s  INFO prepare_target{force=false package_id=soup3 v0.5.0 target="soup"}: cargo::core::compiler::fingerprint: fingerprint dirty for soup3 v0.5.0/Check { test: false }/TargetInner { ..: lib_target("soup", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/soup3-0.5.0/src/lib.rs", Edition2021) }
+   0.813261125s  INFO prepare_target{force=false package_id=soup3 v0.5.0 target="soup"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "glib", old_fingerprint: 1227061215697929894, new_name: "glib", new_fingerprint: 1206247442096398446 }
+   0.814111549s  INFO prepare_target{force=false package_id=soup3-sys v0.5.0 target="soup3_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for soup3-sys v0.5.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("soup3_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/soup3-sys-0.5.0/src/lib.rs", Edition2021) }
+   0.814136344s  INFO prepare_target{force=false package_id=soup3-sys v0.5.0 target="soup3_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "glib", old_fingerprint: 16343238811162793629, new_name: "glib", new_fingerprint: 1718885333964629875 }
+   0.815074563s  INFO prepare_target{force=false package_id=webkit2gtk-sys v2.0.1 target="webkit2gtk_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for webkit2gtk-sys v2.0.1/Check { test: false }/TargetInner { ..: lib_target("webkit2gtk_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/webkit2gtk-sys-2.0.1/src/lib.rs", Edition2018) }
+   0.815094958s  INFO prepare_target{force=false package_id=webkit2gtk-sys v2.0.1 target="webkit2gtk_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "cairo", old_fingerprint: 15352525109681352526, new_name: "cairo", new_fingerprint: 6808463983441364391 }
+   0.816221267s  INFO prepare_target{force=false package_id=tauri-runtime-wry v2.9.1 target="tauri_runtime_wry"}: cargo::core::compiler::fingerprint: fingerprint dirty for tauri-runtime-wry v2.9.1/Check { test: false }/TargetInner { ..: lib_target("tauri_runtime_wry", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-runtime-wry-2.9.1/src/lib.rs", Edition2021) }
+   0.816247040s  INFO prepare_target{force=false package_id=tauri-runtime-wry v2.9.1 target="tauri_runtime_wry"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "webkit2gtk", old_fingerprint: 2105183306479314559, new_name: "webkit2gtk", new_fingerprint: 8401178837475488170 }
+   0.818125364s  INFO prepare_target{force=false package_id=tao v0.34.5 target="tao"}: cargo::core::compiler::fingerprint: fingerprint dirty for tao v0.34.5/Check { test: false }/TargetInner { ..: lib_target("tao", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tao-0.34.5/src/lib.rs", Edition2021) }
+   0.818175861s  INFO prepare_target{force=false package_id=tao v0.34.5 target="tao"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "gtk", old_fingerprint: 11156024595475960767, new_name: "gtk", new_fingerprint: 5816999163780824561 }
+   0.820051810s  INFO prepare_target{force=false package_id=gdkwayland-sys v0.18.2 target="gdk_wayland_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for gdkwayland-sys v0.18.2/Check { test: false }/TargetInner { ..: lib_target("gdk_wayland_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gdkwayland-sys-0.18.2/src/lib.rs", Edition2021) }
+   0.820109501s  INFO prepare_target{force=false package_id=gdkwayland-sys v0.18.2 target="gdk_wayland_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "gdk", old_fingerprint: 9373684436616355796, new_name: "gdk", new_fingerprint: 9402907156089976908 }
+   0.822214051s  INFO prepare_target{force=false package_id=gdkx11-sys v0.18.2 target="gdk_x11_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for gdkx11-sys v0.18.2/Check { test: false }/TargetInner { ..: lib_target("gdk_x11_sys", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gdkx11-sys-0.18.2/src/lib.rs", Edition2021) }
+   0.822337117s  INFO prepare_target{force=false package_id=gdkx11-sys v0.18.2 target="gdk_x11_sys"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "gdk", old_fingerprint: 9373684436616355796, new_name: "gdk", new_fingerprint: 9402907156089976908 }
+   0.832485219s  INFO prepare_target{force=false package_id=x11-dl v2.21.0 target="x11_dl"}: cargo::core::compiler::fingerprint: fingerprint dirty for x11-dl v2.21.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("x11_dl", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/x11-dl-2.21.0/src/lib.rs", Edition2021) }
+   0.832618552s  INFO prepare_target{force=false package_id=x11-dl v2.21.0 target="x11_dl"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "build_script_build", old_fingerprint: 6995648527509311303, new_name: "build_script_build", new_fingerprint: 11331858506663245735 }
+   0.838249402s  INFO prepare_target{force=false package_id=wry v0.53.5 target="wry"}: cargo::core::compiler::fingerprint: fingerprint dirty for wry v0.53.5/Check { test: false }/TargetInner { ..: lib_target("wry", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wry-0.53.5/src/lib.rs", Edition2021) }
+   0.838335660s  INFO prepare_target{force=false package_id=wry v0.53.5 target="wry"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "webkit2gtk", old_fingerprint: 2105183306479314559, new_name: "webkit2gtk", new_fingerprint: 8401178837475488170 }
+   0.841006228s  INFO prepare_target{force=false package_id=gdkx11 v0.18.2 target="gdkx11"}: cargo::core::compiler::fingerprint: fingerprint dirty for gdkx11 v0.18.2/Check { test: false }/TargetInner { ..: lib_target("gdkx11", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gdkx11-0.18.2/src/lib.rs", Edition2021) }
+   0.841047785s  INFO prepare_target{force=false package_id=gdkx11 v0.18.2 target="gdkx11"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "gdk", old_fingerprint: 12540813046470263897, new_name: "gdk", new_fingerprint: 12889217987224388274 }
+   0.843190400s  INFO prepare_target{force=false package_id=tauri-plugin-opener v2.5.2 target="tauri_plugin_opener"}: cargo::core::compiler::fingerprint: fingerprint dirty for tauri-plugin-opener v2.5.2/Check { test: false }/TargetInner { ..: lib_target("tauri_plugin_opener", ["lib"], "/home/ezy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-plugin-opener-2.5.2/src/lib.rs", Edition2021) }
+   0.843242015s  INFO prepare_target{force=false package_id=tauri-plugin-opener v2.5.2 target="tauri_plugin_opener"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "tauri", old_fingerprint: 14839615404367463863, new_name: "tauri", new_fingerprint: 14798823276034457743 }
+   0.867057886s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat_lib"}: cargo::core::compiler::fingerprint: fingerprint dirty for ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri)/Check { test: true }/TargetInner { ..: lib_target("ezchat_lib", ["staticlib", "cdylib", "rlib"], "/home/ezy/_projects/Tauri/ezchat/src-tauri/src/lib.rs", Edition2021) }
+   0.867148125s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat_lib"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "tauri", old_fingerprint: 14839615404367463863, new_name: "tauri", new_fingerprint: 14798823276034457743 }
+   0.871912416s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat"}: cargo::core::compiler::fingerprint: fingerprint dirty for ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri)/Check { test: false }/TargetInner { name: "ezchat", doc: true, ..: with_path("/home/ezy/_projects/Tauri/ezchat/src-tauri/src/main.rs", Edition2021) }
+   0.871956069s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "tauri", old_fingerprint: 14839615404367463863, new_name: "tauri", new_fingerprint: 14798823276034457743 }
+   0.875969744s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat"}: cargo::core::compiler::fingerprint: fingerprint dirty for ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri)/Check { test: true }/TargetInner { name: "ezchat", doc: true, ..: with_path("/home/ezy/_projects/Tauri/ezchat/src-tauri/src/main.rs", Edition2021) }
+   0.875999846s  INFO prepare_target{force=false package_id=ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri) target="ezchat"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "tauri", old_fingerprint: 14839615404367463863, new_name: "tauri", new_fingerprint: 14798823276034457743 }
+    Checking glib-sys v0.18.1
     Checking x11-dl v2.21.0
-warning: soup3-sys@0.5.0: Could not run `PKG_CONFIG_PATH=/usr/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags libsoup-3.0 'libsoup-3.0 >= 3.0'`
-error: failed to run custom build command for `soup3-sys v0.5.0`
-note: To improve backtraces for build dependencies, set the CARGO_PROFILE_DEV_BUILD_OVERRIDE_DEBUG=true environment variable to enable debug information generation.
-
-Caused by:
-  process didn't exit successfully: `/home/ezy/_projects/Tauri/ezchat/src-tauri/target/debug/build/soup3-sys-5c84b2e79e187c14/build-script-build` (exit status: 1)
-  --- stdout
-  cargo:rerun-if-env-changed=LIBSOUP_3.0_NO_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
-  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
-  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
-  cargo:warning=Could not run `PKG_CONFIG_PATH=/usr/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags libsoup-3.0 'libsoup-3.0 >= 3.0'`
-  The pkg-config command could not be found.
-
-  Most likely, you need to install a pkg-config package for your OS.
-  Try `apt install pkg-config`, or `yum install pkg-config`, or `brew install pkgconf`
-  or `pkg install pkg-config`, or `apk add pkgconfig` depending on your distribution.
-
-  If you've already installed it, ensure the pkg-config command is one of the
-  directories in the PATH environment variable.
-
-  If you did not expect this build to link to a pre-installed system library,
-  then check documentation of the soup3-sys crate for an option to
-  build the library from source, or disable features or dependencies
-  that require pkg-config.
+    Checking gobject-sys v0.18.0
+    Checking cairo-sys-rs v0.18.2
+    Checking gio-sys v0.18.1
+    Checking pango-sys v0.18.0
+    Checking atk-sys v0.18.2
+    Checking javascriptcore-rs-sys v1.1.1
+    Checking glib v0.18.5
+    Checking gdk-pixbuf-sys v0.18.0
+    Checking soup3-sys v0.5.0
+    Checking gdk-sys v0.18.2
+    Checking gtk-sys v0.18.2
+    Checking gdkx11-sys v0.18.2
+    Checking gdkwayland-sys v0.18.2
+    Checking webkit2gtk-sys v2.0.1
+    Checking gio v0.18.4
+    Checking cairo-rs v0.18.5
+    Checking atk v0.18.2
+    Checking javascriptcore-rs v1.1.2
+    Checking pango v0.18.3
+    Checking gdk-pixbuf v0.18.5
+    Checking soup3 v0.5.0
+    Checking gdk v0.18.2
+    Checking gtk v0.18.2
+    Checking gdkx11 v0.18.2
+    Checking webkit2gtk v2.0.1
+    Checking tao v0.34.5
+    Checking muda v0.17.1
+    Checking wry v0.53.5
+    Checking tauri-runtime v2.9.1
+    Checking tauri-runtime-wry v2.9.1
+    Checking tauri v2.9.1
+    Checking tauri-plugin-opener v2.5.2
+    Checking ezchat v0.1.0 (/home/ezy/_projects/Tauri/ezchat/src-tauri)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1m 04s

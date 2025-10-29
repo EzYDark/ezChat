@@ -117,15 +117,51 @@
 		<div
 			class="flex items-center bg-panel overflow-x-hidden border border-border"
 		>
-			<div class="w-10 h-10 bg-neutral-900 ml-2"></div>
+			<div
+				class="w-10 h-10 mx-5 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600"
+			>
+				<svg
+					class="w-9/10 h-9/10 text-white"
+					aria-hidden="true"
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+				>
+					<path
+						stroke="currentColor"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="1"
+						d="M5 12h14m-7 7V5"
+					/>
+				</svg>
+			</div>
 			<textarea
 				bind:this={messageInput}
-				class="w-full resize-none m-2 border border-neutral-900 custom-scrollbar"
-				style="height:1rem; min-height:1rem; max-height:16rem; padding:0.5rem;"
+				class="w-full my-2 resize-none border border-neutral-900 custom-scrollbar radius"
+				style="height:1rem; min-height:1rem; max-height:16rem; padding:0.5rem; outline: none;"
 				placeholder="Type your message..."
 				on:input={autoResize}
 			></textarea>
-			<div class="w-10 h-10 bg-neutral-900 mr-2"></div>
+			<div
+				class="w-10 h-10 mx-5 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600"
+			>
+				<svg
+					class="w-8/10 h-8/10 text-white rotate-90"
+					aria-hidden="true"
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+				>
+					<path
+						stroke="currentColor"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="1"
+						d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"
+					/>
+				</svg>
+			</div>
 		</div>
 	</div>
 

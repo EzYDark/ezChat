@@ -30,7 +30,7 @@
         {/if}
         <p>{text}</p>
     </div>
-    <div class="w-full text-[8px] mt-1 ml-1 text-message-top-text">
+    <div class="w-full text-[10px] mt-1 ml-1 text-message-top-text">
         <p>{timestamp}</p>
     </div>
 </div>
