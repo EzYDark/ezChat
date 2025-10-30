@@ -118,10 +118,10 @@
 			class="flex items-center bg-panel overflow-x-hidden border border-border"
 		>
 			<div
-				class="w-10 h-10 mx-5 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600"
+				class="w-11 h-10 mx-5 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600"
 			>
 				<svg
-					class="w-9/10 h-9/10 text-white"
+					class="w-8 h-8 text-white"
 					aria-hidden="true"
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
@@ -144,10 +144,10 @@
 				on:input={autoResize}
 			></textarea>
 			<div
-				class="w-10 h-10 mx-5 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600"
+				class="w-11 h-10 mx-5 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600"
 			>
 				<svg
-					class="w-8/10 h-8/10 text-white rotate-90"
+					class="w-7 h-7 text-white rotate-90"
 					aria-hidden="true"
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
