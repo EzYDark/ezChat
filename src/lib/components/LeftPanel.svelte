@@ -5,7 +5,7 @@
     import { SettingsIcon } from "@lucide/svelte";
 
     export let initialWidth = 280;
-    export let minWidth = 160;
+    export let minWidth = 220;
     export let handleThickness = 2;
     export let onResize: (width: number) => void = () => {};
     export let onResizeEnd: (width: number) => void = () => {};
