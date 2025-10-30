@@ -165,7 +165,7 @@
 		</div>
 	</div>
 
-	<div
+	<!-- <div
 		class="h-full w-2 cursor-col-resize"
 		role="separator"
 		on:pointerdown={(event) => onPointerDown("right", event)}
@@ -174,5 +174,5 @@
 	<div
 		class="h-full shrink-0 bg-panel border border-border"
 		style={`width:${rightWidth}px;`}
-	></div>
+	></div> -->
 </main>
