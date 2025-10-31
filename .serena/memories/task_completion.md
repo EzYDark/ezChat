@@ -1,0 +1,4 @@
+- Run `pnpm check` before handing off changes to catch Svelte and TypeScript issues.
+- For UI changes, manually verify via `pnpm dev` or `pnpm tauri dev` depending on target shell.
+- No automated tests configured; document manual validation done.
+- Keep git workspace tidy; avoid touching unrelated files.
