@@ -2,7 +2,7 @@
     import { onDestroy } from "svelte";
     import ResizableHandle from "$lib/components/ResizableHandle.svelte";
     import ChatListItem from "$lib/components/ChatListItem.svelte";
-    import { SettingsIcon } from "@lucide/svelte";
+    import { ArrowLeft, ArrowLeftFromLine, SettingsIcon } from "@lucide/svelte";
 
     export let initialWidth = 280;
     export let minWidth = 220;
@@ -104,11 +104,15 @@
     >
         <div class="mx-4 h-16 flex items-center justify-between">
             <h1 class="text-[20px] font-bold">ezChat</h1>
-            <!-- svelte-ignore a11y_missing_content -->
             <div
-                class="w-10 h-10 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600"
+                class="flex"
             >
-                <SettingsIcon size="20" strokeWidth=1 />
+                <div class="w-10 h-10 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600">
+                    <SettingsIcon size="20" strokeWidth=1 class="cursor-pointer" />
+                </div>
+                <div class="w-10 h-10 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600">
+                    <ArrowLeftFromLine size="20" strokeWidth=1 class="cursor-pointer" />
+                </div>
             </div>
         </div>
         <div
