@@ -26,11 +26,13 @@
 }
 
 @layer base {
-    html {
+    html, body {
         font-family: "Lilex", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
         color: var(--color-text);
         background-color: var(--color-background);
         font-size: 14px;
+        /* scroll-behavior: auto;
+        scroll-snap-type: none; */
     }
 
     .custom-scrollbar {

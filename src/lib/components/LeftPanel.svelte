@@ -108,7 +108,7 @@
             <div
                 class="w-10 h-10 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600"
             >
-                <SettingsIcon size="20" />
+                <SettingsIcon size="20" strokeWidth=1 />
             </div>
         </div>
         <div
