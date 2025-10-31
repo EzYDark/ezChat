@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onDestroy } from "svelte";
 	import ResizableHandle from "$lib/components/ResizableHandle.svelte";
+    import { ArrowDown, ArrowRightFromLine, ChevronDown } from "@lucide/svelte";
 
 	export let initialWidth = 260;
 	export let minWidth = 160;
@@ -52,6 +53,27 @@
 		class="h-full bg-panel border border-border"
 		style={`width:${width}px;`}
 	>
-		<slot />
+		<div class="mx-4 h-16 flex items-center jsutify-center">
+			<div class="flex-1">
+				<div class="w-10 h-10 flex-1 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600 cursor-pointer ">
+					<ArrowRightFromLine size="20" strokeWidth=1 />
+				</div>
+			</div>
+			<h1 class="flex-1 text-[16px] font-bold text-center">Options</h1>
+			<div class="flex-1"></div>
+		</div>
+		<div class="bg-message-top flex flex-col gap-2">
+			<div class="flex w-full justify-between px-4 py-3 hover:bg-neutral-700 active:bg-neutral-600 cursor-pointer">
+				<p class="">Shared Files</p>
+				<div class="w-5 h-5 flex justify-center items-center">
+					<ChevronDown size="20" strokeWidth=1 />
+				</div>
+			</div>
+			<div class="flex-1 grid grid-cols-2 gap-2 overflow-y-auto p-2">
+				<img src="/images/cat.png" alt="File 1" class="w-full h-full object-cover aspect-square border border-border2" />
+				<img src="/images/screenshot_test.png" alt="File 2" class="w-full h-full object-cover aspect-square border border-border2" />
+				<img src="/images/screenshot_test2.png" alt="File 3" class="w-full h-full object-cover aspect-square border border-border2 " />
+			</div>
+		</div>
 	</div>
 </div>

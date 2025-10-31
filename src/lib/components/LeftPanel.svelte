@@ -104,15 +104,8 @@
     >
         <div class="mx-4 h-16 flex items-center justify-between">
             <h1 class="text-[20px] font-bold">ezChat</h1>
-            <div
-                class="flex"
-            >
-                <div class="w-10 h-10 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600">
-                    <SettingsIcon size="20" strokeWidth=1 class="cursor-pointer" />
-                </div>
-                <div class="w-10 h-10 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600">
-                    <ArrowLeftFromLine size="20" strokeWidth=1 class="cursor-pointer" />
-                </div>
+            <div class="w-10 h-10 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600 cursor-pointer">
+                <ArrowLeftFromLine size="20" strokeWidth=1 />
             </div>
         </div>
         <div
@@ -124,14 +117,19 @@
                 type="text"
             />
         </div>
-        {#each chatItems as chat (chat.id)}
-            <ChatListItem
-                avatarSrc={chat.avatarSrc}
-                title={chat.title}
-                preview={chat.preview}
-                timestamp={chat.timestamp}
-            />
-        {/each}
+        <div class="flex-1 overflow-auto space-y-2">
+            {#each chatItems as chat (chat.id)}
+                <ChatListItem
+                    avatarSrc={chat.avatarSrc}
+                    title={chat.title}
+                    preview={chat.preview}
+                    timestamp={chat.timestamp}
+                />
+            {/each}
+        </div>
+        <div class="w-10 h-10 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600 cursor-pointer ml-4 mb-4 mt-auto">
+            <SettingsIcon size="20" strokeWidth=1 />
+        </div>
     </div>
     <ResizableHandle
         orientation="vertical"
