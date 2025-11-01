@@ -1,6 +1,0 @@
-- `pnpm install` to install dependencies.
-- `pnpm dev` to run the SvelteKit dev server (Vite).
-- `pnpm build` to create a production build.
-- `pnpm preview` to serve the production build locally.
-- `pnpm check` to run SvelteKit sync and `svelte-check` type/diagnostic pass.
-- `pnpm tauri dev` to run the desktop app shell via Tauri CLI.

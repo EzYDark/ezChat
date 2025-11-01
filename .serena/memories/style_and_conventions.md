@@ -1,5 +1,0 @@
-- Frontend uses Svelte 5 with SvelteKit 2, Tailwind CSS 4 theme tokens, and monospace Lilex font.
-- Styling relies on Tailwind's new utility layers plus custom CSS variables defined in `src/app.css`.
-- TypeScript config present but no strict typing guidance yet; follow SvelteKit conventions for file-based routing.
-- UI tone is dark-themed with monospace typography; keep new components consistent with existing color variables.
-- Rust-backed Tauri shell lives under `src-tauri`; keep separation between web UI and native shell.
