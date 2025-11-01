@@ -1,7 +1,7 @@
 <script lang="ts">
-	import MessageBubble from "$lib/components/MessageBubble.svelte";
-	import Seperator from "$lib/components/Seperator.svelte";
-	import InputPanel from "$lib/components/InputPanel.svelte";
+	import MessageBubble from "$lib/components/chat/MessageBubble.svelte";
+	import Seperator from "$lib/components/chat/Seperator.svelte";
+	import InputPanel from "$lib/components/chat/InputPanel.svelte";
     import { ArrowLeftFromLine, ArrowRightFromLine } from "@lucide/svelte";
 
 	export let isRightPanelOpen: boolean = false;

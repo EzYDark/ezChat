@@ -1,8 +1,8 @@
 <script lang="ts">
     import { onDestroy } from "svelte";
-    import ResizableHandle from "$lib/components/ResizableHandle.svelte";
-    import ChatListItem from "$lib/components/ChatListItem.svelte";
-    import { ArrowLeft, ArrowLeftFromLine, SettingsIcon } from "@lucide/svelte";
+    import ResizableHandle from "$lib/components/ui/ResizableHandle.svelte";
+    import ChatListItem from "$lib/components/chat/ChatListItem.svelte";
+    import { ArrowLeftFromLine, SettingsIcon } from "@lucide/svelte";
 
     export let initialWidth = 280;
     export let minWidth = 220;

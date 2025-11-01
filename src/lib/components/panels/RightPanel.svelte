@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onDestroy } from "svelte";
-	import ResizableHandle from "$lib/components/ResizableHandle.svelte";
+	import ResizableHandle from "$lib/components/ui/ResizableHandle.svelte";
     import { ArrowDown, ArrowRightFromLine, ChevronDown, ChevronRight } from "@lucide/svelte";
 
 	export let isRightPanelOpen: boolean = false;

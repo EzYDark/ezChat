@@ -1,7 +1,7 @@
 <script lang="ts">
-	import LeftPanel from "$lib/components/LeftPanel.svelte";
-	import MainPanel from "$lib/components/MainPanel.svelte";
-	import RightPanel from "$lib/components/RightPanel.svelte";
+	import LeftPanel from "$lib/components/panels/LeftPanel.svelte";
+	import MainPanel from "$lib/components/panels/MainPanel.svelte";
+	import RightPanel from "$lib/components/panels/RightPanel.svelte";
 
 	let isRightPanelOpen = true;
 	function toggleRightPanel() {
