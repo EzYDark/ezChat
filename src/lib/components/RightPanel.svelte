@@ -61,7 +61,7 @@
 	>
 		<div class="mx-4 h-16 flex items-center jsutify-center">
 			<div class="flex-1">
-				<button class="w-10 h-10 flex-1 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600 cursor-pointer" onclick={onToggleRightPanel}>
+				<button class="w-10 h-10 flex-1 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600 cursor-pointer aspect-square" onclick={onToggleRightPanel}>
 					<ArrowRightFromLine size="20" strokeWidth=1/>
 				</button>
 			</div>

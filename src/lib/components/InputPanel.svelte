@@ -27,7 +27,7 @@
 
 <div class="flex items-center bg-panel overflow-x-hidden border border-border">
 	<div
-		class="w-11 h-10 mx-5 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600 cursor-pointer"
+		class="w-11 h-10 mx-5 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600 cursor-pointer aspect-square"
 	>
 		<Plus
 			size="28"
@@ -45,7 +45,7 @@
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div
-		class="w-11 h-10 mx-5 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600 cursor-pointer"
+		class="w-11 h-10 mx-5 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600 cursor-pointer aspect-square"
 		on:click={onSend}
 	>
 		<SendHorizonal size="22" strokeWidth=1 />
