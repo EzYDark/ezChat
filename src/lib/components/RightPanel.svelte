@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onDestroy } from "svelte";
 	import ResizableHandle from "$lib/components/ResizableHandle.svelte";
-    import { ArrowDown, ArrowRightFromLine, ChevronDown } from "@lucide/svelte";
+    import { ArrowDown, ArrowRightFromLine, ChevronDown, ChevronRight } from "@lucide/svelte";
 
 	export let isRightPanelOpen: boolean = false;
 	export let onToggleRightPanel: () => void = () => {};
@@ -11,6 +11,8 @@
 	export let handleThickness = 2;
 	export let onResize: (width: number) => void = () => {};
 	export let onResizeEnd: (width: number) => void = () => {};
+
+	let sharedFilesOpen = true;
 
 	let width = initialWidth;
 	let startX = 0;
@@ -67,17 +69,23 @@
 			<div class="flex-1"></div>
 		</div>
 		<div class="bg-message-top flex flex-col gap-2">
-			<div class="flex w-full justify-between px-4 py-3 hover:bg-neutral-700 active:bg-neutral-600 cursor-pointer">
-				<p class="">Shared Files</p>
+			<button class="flex w-full justify-between px-4 py-3 hover:bg-neutral-700 active:bg-neutral-600 cursor-pointer" onclick={() => sharedFilesOpen = !sharedFilesOpen}>
+				<p>Shared Files</p>
 				<div class="w-5 h-5 flex justify-center items-center">
-					<ChevronDown size="20" strokeWidth=1 />
+					{#if sharedFilesOpen}
+						<ChevronDown size="20" strokeWidth=1 />
+					{:else}
+						<ChevronRight size="20" strokeWidth=1 />
+					{/if}
 				</div>
-			</div>
+			</button>
+			{#if sharedFilesOpen}
 			<div class="flex-1 grid grid-cols-2 gap-2 overflow-y-auto p-2">
 				<img src="/images/cat.png" alt="File 1" class="w-full h-full object-cover aspect-square border border-border2" />
 				<img src="/images/screenshot_test.png" alt="File 2" class="w-full h-full object-cover aspect-square border border-border2" />
 				<img src="/images/screenshot_test2.png" alt="File 3" class="w-full h-full object-cover aspect-square border border-border2 " />
 			</div>
+			{/if}
 		</div>
 	</div>
 </div>
