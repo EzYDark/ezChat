@@ -3,6 +3,9 @@
 	import ResizableHandle from "$lib/components/ResizableHandle.svelte";
     import { ArrowDown, ArrowRightFromLine, ChevronDown } from "@lucide/svelte";
 
+	export let isRightPanelOpen: boolean = false;
+	export let onToggleRightPanel: () => void = () => {};
+
 	export let initialWidth = 260;
 	export let minWidth = 160;
 	export let handleThickness = 2;
@@ -43,6 +46,7 @@
 	});
 </script>
 
+{#if isRightPanelOpen}
 <div class="flex h-full shrink-0">
 	<ResizableHandle
 		orientation="vertical"
@@ -55,9 +59,9 @@
 	>
 		<div class="mx-4 h-16 flex items-center jsutify-center">
 			<div class="flex-1">
-				<div class="w-10 h-10 flex-1 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600 cursor-pointer ">
-					<ArrowRightFromLine size="20" strokeWidth=1 />
-				</div>
+				<button class="w-10 h-10 flex-1 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600 cursor-pointer" onclick={onToggleRightPanel}>
+					<ArrowRightFromLine size="20" strokeWidth=1/>
+				</button>
 			</div>
 			<h1 class="flex-1 text-[16px] font-bold text-center">Options</h1>
 			<div class="flex-1"></div>
@@ -77,3 +81,4 @@
 		</div>
 	</div>
 </div>
+{/if}

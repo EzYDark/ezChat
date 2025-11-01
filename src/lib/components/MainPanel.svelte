@@ -4,15 +4,19 @@
 	import InputPanel from "$lib/components/InputPanel.svelte";
     import { ArrowLeftFromLine } from "@lucide/svelte";
 
+	export let isRightPanelOpen: boolean = false;
+	export let onToggleRightPanel: () => void = () => {};
 	export let onSend: () => void = () => {};
 </script>
 
 <div class="flex flex-col flex-1">
 	<div class="h-full flex flex-col flex-1 gap-2 overflow-y-auto custom-scrollbar relative">
 		<div class="absolute right-2 top-1 flex">
-			<div class="w-10 h-10 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600 cursor-pointer">
-				<ArrowLeftFromLine size="20" strokeWidth="1"/>
-			</div>
+			{#if !isRightPanelOpen}
+			<button class="w-10 h-10 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600 cursor-pointer" onclick={onToggleRightPanel}>
+				<ArrowLeftFromLine size="20" strokeWidth="1" />
+			</button>
+			{/if}
 		</div>
 		<MessageBubble
 			sender="Kheper"
