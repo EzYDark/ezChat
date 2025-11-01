@@ -10,6 +10,9 @@
     export let onResize: (width: number) => void = () => {};
     export let onResizeEnd: (width: number) => void = () => {};
 
+    export let isLeftPanelOpen: boolean = false;
+    export let onToggleLeftPanel: () => void = () => {};
+
     let width = initialWidth;
     let startX = 0;
     let startWidth = width;
@@ -98,15 +101,16 @@
 </script>
 
 <div class="flex h-full shrink-0">
+    {#if isLeftPanelOpen}
     <div
         class="h-full bg-panel border border-border flex flex-col gap-2"
         style={`width:${width}px;`}
     >
         <div class="mx-4 h-16 flex items-center justify-between">
             <h1 class="text-[20px] font-bold">ezChat</h1>
-            <div class="w-10 h-10 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600 cursor-pointer">
+            <button class="w-10 h-10 flex justify-center items-center rounded-md hover:bg-neutral-700 active:bg-neutral-600 cursor-pointer" onclick={onToggleLeftPanel}>
                 <ArrowLeftFromLine size="20" strokeWidth=1 />
-            </div>
+            </button>
         </div>
         <div
             class="bg-message-top w-[calc(100%-24px)] h-14 self-center border border-border2 mb-2"
@@ -136,4 +140,5 @@
         thickness={handleThickness}
         {onPointerDown}
     />
+    {/if}
 </div>

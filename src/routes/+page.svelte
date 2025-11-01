@@ -8,13 +8,18 @@
 		isRightPanelOpen = !isRightPanelOpen;
 	}
 
+	let isLeftPanelOpen = true;
+	function toggleLeftPanel() {
+		isLeftPanelOpen = !isLeftPanelOpen;
+	}
+
 	function handleSend() {
 		/* TODO: wire up send action */
 	}
 </script>
 
 <main class="flex h-screen w-screen p-2 gap-2">
-	<LeftPanel />
-	<MainPanel isRightPanelOpen={isRightPanelOpen} onToggleRightPanel={toggleRightPanel} onSend={handleSend} />
+	<LeftPanel isLeftPanelOpen={isLeftPanelOpen} onToggleLeftPanel={toggleLeftPanel} />
+	<MainPanel isRightPanelOpen={isRightPanelOpen} onToggleRightPanel={toggleRightPanel} isLeftPanelOpen={isLeftPanelOpen} onToggleLeftPanel={toggleLeftPanel} onSend={handleSend} />
 	<RightPanel isRightPanelOpen={isRightPanelOpen} onToggleRightPanel={toggleRightPanel} />
 </main>
