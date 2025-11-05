@@ -9,6 +9,7 @@ edition = "2021"
 [dependencies]
 dioxus = { version = "0.7.0", features = [] }
 dioxus-desktop = "0.7.0"
+dioxus-free-icons = { version = "0.10.0", features = ["lucide", "feather"] }
 
 [features]
 default = ["web"]

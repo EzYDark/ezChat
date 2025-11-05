@@ -21,8 +21,9 @@
     --color-gray: #727072;
 }
 
-body {
-    font-family: "Lilex", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+body, html {
+    font-family: "Lilex";
     color: var(--color-text);
     background-color: var(--color-background);
     font-size: 14px;
