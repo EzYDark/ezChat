@@ -31,13 +31,17 @@ fn App() -> Element {
 #[component]
 pub fn Hero() -> Element {
     rsx! {
-        div { class: "flex items-center justify-center h-screen",
-            div { class: "flex flex-col items-center justify-center",
-                h1 { class: "text-4xl font-bold text-[color:var(--color-background-contrast)]",
-                    "EzChat"
+        div { class: "h-screen w-screen flex",
+            div { class: "h-full w-14 bg-[color:var(--color-background-contrast)] border border-[color:var(--color-border-muted)]" }
+            div { class: "w-50 bg-[color:var(--color-background-contrast)] border-r border-[color:var(--color-border-muted)]",
+                div { class: "h-10 w-full flex items-center px-2 bg-[color:var(--color-background-contrast)] border-b border-[color:var(--color-border-muted)]",
+                    p { "EzYDark" }
                 }
-                p { class: "text-lg", "A simple chat application" }
             }
+            div { class: "flex-1 bg-[color:var(--color-background)]",
+                div { class: "h-10 w-full bg-[color:var(--color-background-contrast)] border-b border-[color:var(--color-border-muted)]" }
+            }
+            div { class: "w-60 bg-[color:var(--color-background-contrast)] border-l border-[color:var(--color-border-muted)]" }
         }
     }
 }
