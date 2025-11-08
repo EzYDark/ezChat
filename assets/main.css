@@ -26,7 +26,7 @@ body, html {
     font-family: "Lilex";
     color: var(--color-text);
     background-color: var(--color-background);
-    font-size: 14px;
+    font-size: 0.875rem
 }
 
 p b {
