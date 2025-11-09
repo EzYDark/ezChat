@@ -5,7 +5,7 @@ use dioxus::prelude::*;
 use dioxus_desktop::{Config, WindowBuilder};
 use dioxus_free_icons::{
     icons::{
-        fi_icons::{FiChevronDown, FiHash, FiHeadphones, FiMic, FiPlus, FiSettings, FiX},
+        fi_icons::{FiChevronDown, FiHash, FiHeadphones, FiMic, FiPlus, FiSend, FiSettings, FiX},
         ld_icons::{LdCalendar, LdHash, LdNotebook, LdUser},
     },
     Icon,
@@ -261,6 +261,39 @@ pub fn ThirdSidebar() -> Element {
 }
 
 #[component]
+pub fn MainChat() -> Element {
+    rsx! {
+        div {
+            class: "flex-1 flex flex-col",
+            div {
+                class: "flex-1",
+            }
+            div {
+                class: "h-14 flex items-center gap-2 m-3",
+                button {
+                    class: "w-10 h-10 border border-[var(--color-border-muted)] hover:bg-[var(--color-panel)] cursor-pointer active:bg-[var(--color-panel-active)] flex items-center justify-center",
+                    Icon {
+                        icon: FiPlus,
+                        class: "w-6 h-6 text-[var(--color-text-muted)] cursor-pointer hover:text-[var(--color-text)]",
+                    }
+                }
+                textarea {
+                    placeholder: "Type your message...",
+                    class: "w-full h-14 p-3 border border-[var(--color-border-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)] resize-none",
+                }
+                button {
+                    class: "w-10 h-10 border border-[var(--color-border-muted)] hover:bg-[var(--color-panel)] cursor-pointer active:bg-[var(--color-panel-active)] flex items-center justify-center",
+                    Icon {
+                        icon: FiSend,
+                        class: "w-4 h-4 text-[var(--color-text-muted)] cursor-pointer hover:text-[var(--color-text)]",
+                    }
+                }
+            }
+        }
+    }
+}
+
+#[component]
 pub fn Main() -> Element {
     let mut modal_state = ModalState::new();
     use_context_provider(|| modal_state);
@@ -279,7 +312,7 @@ pub fn Main() -> Element {
             },
             FirstSidebar {}
             SecondSidebar {}
-            div { class: "flex-1" }
+            MainChat {}
             ThirdSidebar {}
         }
     }
