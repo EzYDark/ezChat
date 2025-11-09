@@ -229,6 +229,38 @@ pub fn FirstSidebar() -> Element {
 }
 
 #[component]
+pub fn ThirdSidebar() -> Element {
+    rsx! {
+        // Third Sidebar
+        div { class: "h-full w-70 bg-[var(--color-background-contrast)] border-l border-[var(--color-border-muted)] p-3 flex flex-col",
+            input {
+                r#type: "text",
+                placeholder: "Search",
+                class: "w-full h-10 px-3 border border-[var(--color-border-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)]",
+            }
+            div { class: "w-11/12 mx-auto h-px bg-[var(--color-border)] my-3" }
+            div { class: "flex-1 flex flex-col gap-2 mt-2",
+                p { class: "text-xs text-[var(--color-text-muted)]", "Members" }
+                div { class: "flex gap-2 items-center",
+                    img {
+                        src: asset!("/assets/images/cat.png"),
+                        class: "w-9 h-9 object-cover aspect-square",
+                    }
+                    p { "Kheper" }
+                }
+                div { class: "flex gap-2 items-center",
+                    img {
+                        src: asset!("/assets/images/cat.png"),
+                        class: "w-9 h-9 object-cover aspect-square",
+                    }
+                    p { "EzYDark" }
+                }
+            }
+        }
+    }
+}
+
+#[component]
 pub fn Main() -> Element {
     let mut modal_state = ModalState::new();
     use_context_provider(|| modal_state);
@@ -248,7 +280,7 @@ pub fn Main() -> Element {
             FirstSidebar {}
             SecondSidebar {}
             div { class: "flex-1" }
-            div { class: "h-full w-70 bg-[var(--color-background-contrast)] border-l border-[var(--color-border-muted)]" }
+            ThirdSidebar {}
         }
     }
 }
