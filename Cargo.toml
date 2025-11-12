@@ -1,14 +1,13 @@
 [package]
 name = "ezchat"
 version = "0.1.0"
-authors = ["EzYDark <ezydark@protonmail.com>"]
-edition = "2021"
+edition = "2024"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-dioxus = { version = "0.7.0", features = [] }
-dioxus-desktop = "0.7.0"
+dioxus = { version = "0.7.1", features = [] }
+dioxus-desktop = "0.7.1"
 dioxus-free-icons = { version = "0.10.0", features = ["lucide", "feather"] }
 
 [features]
