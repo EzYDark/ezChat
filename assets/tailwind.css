@@ -281,6 +281,9 @@
   .min-h-10 {
     min-height: calc(var(--spacing) * 10);
   }
+  .min-h-15 {
+    min-height: calc(var(--spacing) * 15);
+  }
   .min-h-20 {
     min-height: calc(var(--spacing) * 20);
   }
@@ -350,11 +353,20 @@
   .max-w-\[300px\] {
     max-width: 300px;
   }
+  .max-w-\[400px\] {
+    max-width: 400px;
+  }
   .max-w-\[500px\] {
     max-width: 500px;
   }
   .min-w-\[100px\] {
     min-width: 100px;
+  }
+  .min-w-\[275px\] {
+    min-width: 275px;
+  }
+  .min-w-\[400px\] {
+    min-width: 400px;
   }
   .flex-1 {
     flex: 1;

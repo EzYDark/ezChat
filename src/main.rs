@@ -292,13 +292,13 @@ pub fn MainChat() -> Element {
                                 "EzYDark"
                             }
                             div {
-                                class: "w-fit min-w-[100px] max-w-[60%] min-h-20 bg-[var(--color-panel)] border border-[var(--color-border-muted)] p-2",
+                                class: "w-fit min-w-[275px] max-w-[60%] min-h-20 bg-[var(--color-panel)] border border-[var(--color-border-muted)] p-2",
                                 p { "Hello. How are you? We are making a new chat app. It's going to be awesome. I'm so excited to see how it turns out. We are not testing this message. We are just testing the layout." }
                                 div {
                                     class: "flex",
                                     class: if x % 3 == 0 { "justify-end" },
                                     div {
-                                        class: "grid grid-cols-2 gap-1 mt-3 max-w-[300px]",
+                                        class: "grid grid-cols-2 gap-1 mt-3 max-w-[400px]",
                                         img {
                                             src: asset!("/assets/images/cat.png"),
                                             class: "object-cover aspect-square cursor-pointer",
@@ -328,9 +328,9 @@ pub fn MainChat() -> Element {
                 }
             }
             div {
-                class: "flex items-end gap-2 m-3",
+                class: "flex items-center gap-2 m-3",
                 button {
-                    class: "w-10 h-10 mb-1 border border-[var(--color-border-muted)] hover:bg-[var(--color-panel)] cursor-pointer active:bg-[var(--color-panel-active)] flex items-center justify-center",
+                    class: "w-10 h-10 border border-[var(--color-border-muted)] hover:bg-[var(--color-panel)] cursor-pointer active:bg-[var(--color-panel-active)] flex items-center justify-center",
                     Icon {
                         icon: FiPlus,
                         class: "w-6 h-6 text-[var(--color-text-muted)] cursor-pointer hover:text-[var(--color-text)]",
@@ -341,7 +341,7 @@ pub fn MainChat() -> Element {
                     class: "custom-scrollbar field-sizing-content w-full min-h-10 max-h-50 p-3 border border-[var(--color-border-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)] resize-none",
                 }
                 button {
-                    class: "w-10 h-10 mb-1 border border-[var(--color-border-muted)] hover:bg-[var(--color-panel)] cursor-pointer active:bg-[var(--color-panel-active)] flex items-center justify-center",
+                    class: "w-10 h-10 border border-[var(--color-border-muted)] hover:bg-[var(--color-panel)] cursor-pointer active:bg-[var(--color-panel-active)] flex items-center justify-center",
                     Icon {
                         icon: FiSend,
                         class: "w-4 h-4 text-[var(--color-text-muted)] cursor-pointer hover:text-[var(--color-text)]",
