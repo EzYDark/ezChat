@@ -206,11 +206,11 @@
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
+  }
   .mb-1 {
     margin-bottom: calc(var(--spacing) * 1);
-  }
-  .mb-2 {
-    margin-bottom: calc(var(--spacing) * 2);
   }
   .ml-3 {
     margin-left: calc(var(--spacing) * 3);
@@ -272,11 +272,11 @@
   .min-h-10 {
     min-height: calc(var(--spacing) * 10);
   }
-  .min-h-12 {
-    min-height: calc(var(--spacing) * 12);
+  .min-h-20 {
+    min-height: calc(var(--spacing) * 20);
   }
-  .min-h-14 {
-    min-height: calc(var(--spacing) * 14);
+  .min-h-full {
+    min-height: 100%;
   }
   .w-4 {
     width: calc(var(--spacing) * 4);
@@ -314,11 +314,32 @@
   .w-76 {
     width: calc(var(--spacing) * 76);
   }
+  .w-fit {
+    width: fit-content;
+  }
   .w-full {
     width: 100%;
   }
   .w-screen {
     width: 100vw;
+  }
+  .max-w-\[50\%\] {
+    max-width: 50%;
+  }
+  .max-w-\[50\] {
+    max-width: 50;
+  }
+  .max-w-\[60\%\] {
+    max-width: 60%;
+  }
+  .max-w-\[80\%\] {
+    max-width: 80%;
+  }
+  .min-w-10 {
+    min-width: calc(var(--spacing) * 10);
+  }
+  .min-w-\[100px\] {
+    min-width: 100px;
   }
   .flex-1 {
     flex: 1;
@@ -335,6 +356,9 @@
   .resize-none {
     resize: none;
   }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -347,11 +371,17 @@
   .items-end {
     align-items: flex-end;
   }
+  .items-start {
+    align-items: flex-start;
+  }
   .justify-between {
     justify-content: space-between;
   }
   .justify-center {
     justify-content: center;
+  }
+  .justify-end {
+    justify-content: flex-end;
   }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
@@ -361,6 +391,9 @@
   }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
+  }
+  .self-end {
+    align-self: flex-end;
   }
   .overflow-hidden {
     overflow: hidden;
@@ -375,10 +408,6 @@
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
-  }
-  .border-y {
-    border-block-style: var(--tw-border-style);
-    border-block-width: 1px;
   }
   .border-t {
     border-top-style: var(--tw-border-style);
@@ -411,11 +440,11 @@
   .bg-\[var\(--color-panel\)\] {
     background-color: var(--color-panel);
   }
-  .stroke-1 {
-    stroke-width: 1;
-  }
   .object-cover {
     object-fit: cover;
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
   }
   .p-3 {
     padding: calc(var(--spacing) * 3);

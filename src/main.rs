@@ -265,8 +265,63 @@ pub fn MainChat() -> Element {
     rsx! {
         div {
             class: "flex-1 flex flex-col",
+            // Chat messages
             div {
-                class: "flex-1",
+                class: "flex-1 m-3 overflow-y-auto custom-scrollbar",
+                div {
+                    class: "flex flex-col justify-end gap-3 min-h-full",
+                    for x in 0..100 {
+                        div {
+                            class: "flex flex-col gap-1",
+                            class: if x % 2 == 0 { "items-end" },
+                            p { class: "text-xs text-[var(--color-text-muted)]",
+                                "EzYDark"
+                            }
+                            div {
+                                class: "w-fit min-w-[100px] max-w-[60%] min-h-20 bg-[var(--color-panel)] p-2",
+                                p { "Hello. How are you? We are making a new chat app. It's going to be awesome. I'm so excited to see how it turns out. We are not testing this message. We are just testing the layout." }
+                            }
+                            p { class: "text-xs text-[var(--color-text-muted)]",
+                                "12:00"
+                            }
+                        }
+                        div {
+                            class: "flex flex-col gap-1",
+                            class: if x % 3 == 0 { "items-end" },
+                            p { class: "text-xs text-[var(--color-text-muted)]",
+                                "EzYDark"
+                            }
+                            div {
+                                class: "w-fit min-w-[100px] max-w-[60%] min-h-20 bg-[var(--color-panel)] p-2",
+                                p { "Hello. How are you? We are making a new chat app. It's going to be awesome. I'm so excited to see how it turns out. We are not testing this message. We are just testing the layout." }
+                                div {
+                                    class: "grid grid-cols-2 gap-2 mt-3",
+                                    img {
+                                        src: asset!("/assets/images/cat.png"),
+                                        class: "object-cover aspect-square cursor-pointer",
+                                    }
+                                    img {
+                                        src: asset!("/assets/images/screenshot_test.png"),
+                                        class: "object-cover aspect-square cursor-pointer",
+                                    }
+                                    if x % 2 == 0 {
+                                        img {
+                                            src: asset!("/assets/images/screenshot_test2.png"),
+                                            class: "object-cover aspect-square cursor-pointer",
+                                        }
+                                        img {
+                                            src: asset!("/assets/images/cat.png"),
+                                            class: " object-cover aspect-square cursor-pointer",
+                                        }
+                                    }
+                                }
+                            }
+                            p { class: "text-xs text-[var(--color-text-muted)]",
+                                "12:00"
+                            }
+                        }
+                    }
+                }
             }
             div {
                 class: "flex items-end gap-2 m-3",
