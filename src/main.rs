@@ -262,8 +262,6 @@ pub fn ThirdSidebar() -> Element {
 
 #[component]
 pub fn MainChat() -> Element {
-    let mut message_content = use_signal(|| String::new());
-    let rows = use_memo(move || message_content().split('\n').count().max(1));
     rsx! {
         div {
             class: "flex-1 flex flex-col",
@@ -271,7 +269,7 @@ pub fn MainChat() -> Element {
                 class: "flex-1",
             }
             div {
-                class: "flex items-end gap-2 m-3 min-h-14",
+                class: "flex items-end gap-2 m-3",
                 button {
                     class: "w-10 h-10 border border-[var(--color-border-muted)] hover:bg-[var(--color-panel)] cursor-pointer active:bg-[var(--color-panel-active)] flex items-center justify-center",
                     Icon {
@@ -281,12 +279,7 @@ pub fn MainChat() -> Element {
                 }
                 textarea {
                     placeholder: "Type your message...",
-                    value: "{message_content}",
-                    rows: "{rows}",
-                    oninput: move |e| {
-                        message_content.set(e.value());
-                    },
-                    class: "w-full min-h-14 p-3 border border-[var(--color-border-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)] overflow-y-auto",
+                    class: "field-sizing-content w-full min-h-10 p-3 border border-[var(--color-border-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)] resize-none",
                 }
                 button {
                     class: "w-10 h-10 border border-[var(--color-border-muted)] hover:bg-[var(--color-panel)] cursor-pointer active:bg-[var(--color-panel-active)] flex items-center justify-center",
