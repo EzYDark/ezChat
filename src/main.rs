@@ -262,6 +262,8 @@ pub fn ThirdSidebar() -> Element {
 
 #[component]
 pub fn MainChat() -> Element {
+    let mut message_content = use_signal(|| String::new());
+    let rows = use_memo(move || message_content().split('\n').count().max(1));
     rsx! {
         div {
             class: "flex-1 flex flex-col",
@@ -269,7 +271,7 @@ pub fn MainChat() -> Element {
                 class: "flex-1",
             }
             div {
-                class: "h-14 flex items-center gap-2 m-3",
+                class: "flex items-end gap-2 m-3 min-h-14",
                 button {
                     class: "w-10 h-10 border border-[var(--color-border-muted)] hover:bg-[var(--color-panel)] cursor-pointer active:bg-[var(--color-panel-active)] flex items-center justify-center",
                     Icon {
@@ -279,7 +281,12 @@ pub fn MainChat() -> Element {
                 }
                 textarea {
                     placeholder: "Type your message...",
-                    class: "w-full h-14 p-3 border border-[var(--color-border-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)] resize-none",
+                    value: "{message_content}",
+                    rows: "{rows}",
+                    oninput: move |e| {
+                        message_content.set(e.value());
+                    },
+                    class: "w-full min-h-14 p-3 border border-[var(--color-border-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)] overflow-y-auto",
                 }
                 button {
                     class: "w-10 h-10 border border-[var(--color-border-muted)] hover:bg-[var(--color-panel)] cursor-pointer active:bg-[var(--color-panel-active)] flex items-center justify-center",
@@ -300,7 +307,7 @@ pub fn Main() -> Element {
 
     rsx! {
         div {
-            class: "h-screen w-screen flex",
+            class: "h-screen w-screen flex overflow-hidden",
             onclick: {
                 move |_| {
                     if *modal_state.is_modal_open.read()
