@@ -72,10 +72,10 @@ pub fn SecondSidebar() -> Element {
 
     rsx! {
         // Second Sidebar
-        div { class: "h-full w-76 bg-[var(--color-background-contrast)] border-r border-[var(--color-border-muted)] flex flex-col",
+        div { class: "h-full w-76 bg-[var(--color-background-contrast)] border-r border-[var(--color-border)] flex flex-col",
             // Modal
             button {
-                class: "w-full h-16 border border-[var(--color-border-muted)] flex justify-between items-center px-3 cursor-pointer",
+                class: "w-full h-16 border-b border-[var(--color-border)] flex justify-between items-center px-3 cursor-pointer",
                 onclick: {
                     move |e| {
                         e.stop_propagation();
@@ -127,7 +127,7 @@ pub fn SecondSidebar() -> Element {
                             }
                             p { "Notes" }
                         }
-                        div { class: "w-11/12 mx-auto h-px bg-[var(--color-border)]" }
+                        div { class: "w-11/12 mx-auto h-px border border-[var(--color-border)]" }
                         div { class: "p-4 h-10 w-full flex gap-2 hover:bg-[var(--color-panel-active)] cursor-pointer items-center",
                             Icon {
                                 icon: FiHash,
@@ -157,7 +157,7 @@ pub fn SecondSidebar() -> Element {
                             p { "Channel 4" }
                         }
                     }
-                    div { class: "w-full h-20 border border-[var(--color-border-muted)] flex items-center p-3",
+                    div { class: "w-full h-20 border-t border-[var(--color-border)] flex items-center p-3",
                         img {
                             src: asset!("/assets/images/cat.png"),
                             class: "w-12 h-12 object-cover aspect-square",
@@ -199,7 +199,7 @@ pub fn SecondSidebar() -> Element {
 #[component]
 pub fn FirstSidebar() -> Element {
     rsx! {
-        div { class: "h-full w-20 bg-[var(--color-background-contrast)] border-r border-[var(--color-border-muted)] grid justify-center content-start gap-3 p-3",
+        div { class: "h-full w-20 bg-[var(--color-background-contrast)] border-r border-[var(--color-border)] grid justify-center content-start gap-3 p-3",
             button { class: "h-14 w-14 border-2 border-[var(--color-border)] hover:bg-[var(--color-panel)] cursor-pointer active:bg-[var(--color-panel-active)]",
                 Icon {
                     icon: FiPlus,
@@ -232,11 +232,11 @@ pub fn FirstSidebar() -> Element {
 pub fn ThirdSidebar() -> Element {
     rsx! {
         // Third Sidebar
-        div { class: "h-full w-70 bg-[var(--color-background-contrast)] border-l border-[var(--color-border-muted)] p-3 flex flex-col",
+        div { class: "h-full w-70 bg-[var(--color-background-contrast)] border-l border-[var(--color-border)] p-3 flex flex-col",
             input {
                 r#type: "text",
                 placeholder: "Search",
-                class: "w-full h-10 px-3 border border-[var(--color-border-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)]",
+                class: "w-full h-10 px-3 border border-[var(--color-border)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)]",
             }
             div { class: "w-11/12 mx-auto h-px bg-[var(--color-border)] my-3" }
             div { class: "flex-1 flex flex-col gap-2 mt-2",
@@ -271,7 +271,7 @@ pub fn MainChat() -> Element {
             div {
                 class: "flex items-end gap-2 m-3",
                 button {
-                    class: "w-10 h-10 border border-[var(--color-border-muted)] hover:bg-[var(--color-panel)] cursor-pointer active:bg-[var(--color-panel-active)] flex items-center justify-center",
+                    class: "w-10 h-10 mb-1 border border-[var(--color-border-muted)] hover:bg-[var(--color-panel)] cursor-pointer active:bg-[var(--color-panel-active)] flex items-center justify-center",
                     Icon {
                         icon: FiPlus,
                         class: "w-6 h-6 text-[var(--color-text-muted)] cursor-pointer hover:text-[var(--color-text)]",
@@ -282,7 +282,7 @@ pub fn MainChat() -> Element {
                     class: "field-sizing-content w-full min-h-10 p-3 border border-[var(--color-border-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)] resize-none",
                 }
                 button {
-                    class: "w-10 h-10 border border-[var(--color-border-muted)] hover:bg-[var(--color-panel)] cursor-pointer active:bg-[var(--color-panel-active)] flex items-center justify-center",
+                    class: "w-10 h-10 mb-1 border border-[var(--color-border-muted)] hover:bg-[var(--color-panel)] cursor-pointer active:bg-[var(--color-panel-active)] flex items-center justify-center",
                     Icon {
                         icon: FiSend,
                         class: "w-4 h-4 text-[var(--color-text-muted)] cursor-pointer hover:text-[var(--color-text)]",
