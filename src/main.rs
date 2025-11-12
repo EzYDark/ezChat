@@ -292,26 +292,30 @@ pub fn MainChat() -> Element {
                                 "EzYDark"
                             }
                             div {
-                                class: "w-fit min-w-[100px] max-w-[60%] min-h-20 bg-[var(--color-panel)] p-2",
+                                class: "w-fit min-w-[100px] max-w-[60%] min-h-20 bg-[var(--color-panel)] border border-[var(--color-border-muted)] p-2",
                                 p { "Hello. How are you? We are making a new chat app. It's going to be awesome. I'm so excited to see how it turns out. We are not testing this message. We are just testing the layout." }
                                 div {
-                                    class: "grid grid-cols-2 gap-2 mt-3",
-                                    img {
-                                        src: asset!("/assets/images/cat.png"),
-                                        class: "object-cover aspect-square cursor-pointer",
-                                    }
-                                    img {
-                                        src: asset!("/assets/images/screenshot_test.png"),
-                                        class: "object-cover aspect-square cursor-pointer",
-                                    }
-                                    if x % 2 == 0 {
+                                    class: "flex",
+                                    class: if x % 3 == 0 { "justify-end" },
+                                    div {
+                                        class: "grid grid-cols-2 gap-1 mt-3 max-w-[50%]",
                                         img {
-                                            src: asset!("/assets/images/screenshot_test2.png"),
+                                            src: asset!("/assets/images/cat.png"),
                                             class: "object-cover aspect-square cursor-pointer",
                                         }
                                         img {
-                                            src: asset!("/assets/images/cat.png"),
-                                            class: " object-cover aspect-square cursor-pointer",
+                                            src: asset!("/assets/images/screenshot_test.png"),
+                                            class: "object-cover aspect-square cursor-pointer",
+                                        }
+                                        if x % 2 == 0 {
+                                            img {
+                                                src: asset!("/assets/images/screenshot_test2.png"),
+                                                class: "object-cover aspect-square cursor-pointer",
+                                            }
+                                            img {
+                                                src: asset!("/assets/images/cat.png"),
+                                                class: " object-cover aspect-square cursor-pointer",
+                                            }
                                         }
                                     }
                                 }
@@ -334,7 +338,7 @@ pub fn MainChat() -> Element {
                 }
                 textarea {
                     placeholder: "Type your message...",
-                    class: "field-sizing-content w-full min-h-10 p-3 border border-[var(--color-border-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)] resize-none",
+                    class: "custom-scrollbar field-sizing-content w-full min-h-10 max-h-50 p-3 border border-[var(--color-border-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)] resize-none",
                 }
                 button {
                     class: "w-10 h-10 mb-1 border border-[var(--color-border-muted)] hover:bg-[var(--color-panel)] cursor-pointer active:bg-[var(--color-panel-active)] flex items-center justify-center",
