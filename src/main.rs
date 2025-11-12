@@ -298,7 +298,7 @@ pub fn MainChat() -> Element {
                                     class: "flex",
                                     class: if x % 3 == 0 { "justify-end" },
                                     div {
-                                        class: "grid grid-cols-2 gap-1 mt-3 max-w-[50%]",
+                                        class: "grid grid-cols-2 gap-1 mt-3 max-w-[300px]",
                                         img {
                                             src: asset!("/assets/images/cat.png"),
                                             class: "object-cover aspect-square cursor-pointer",
