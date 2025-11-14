@@ -9,3 +9,5 @@
 *.diff
 *.patch
 *.diff.patch
+
+*.db

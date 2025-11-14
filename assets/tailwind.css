@@ -209,9 +209,6 @@
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
   }
-  .mb-1 {
-    margin-bottom: calc(var(--spacing) * 1);
-  }
   .ml-3 {
     margin-left: calc(var(--spacing) * 3);
   }
@@ -220,9 +217,6 @@
   }
   .grid {
     display: grid;
-  }
-  .table {
-    display: table;
   }
   .field-sizing-content {
     field-sizing: content;
@@ -269,20 +263,11 @@
   .h-screen {
     height: 100vh;
   }
-  .max-h-40 {
-    max-height: calc(var(--spacing) * 40);
-  }
   .max-h-50 {
     max-height: calc(var(--spacing) * 50);
   }
-  .max-h-60 {
-    max-height: calc(var(--spacing) * 60);
-  }
   .min-h-10 {
     min-height: calc(var(--spacing) * 10);
-  }
-  .min-h-15 {
-    min-height: calc(var(--spacing) * 15);
   }
   .min-h-20 {
     min-height: calc(var(--spacing) * 20);
@@ -304,9 +289,6 @@
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
-  }
-  .w-11 {
-    width: calc(var(--spacing) * 11);
   }
   .w-11\/12 {
     width: calc(11/12 * 100%);
@@ -335,29 +317,11 @@
   .w-screen {
     width: 100vw;
   }
-  .max-w-10 {
-    max-width: calc(var(--spacing) * 10);
-  }
-  .max-w-100 {
-    max-width: calc(var(--spacing) * 100);
-  }
-  .max-w-\[50\%\] {
-    max-width: 50%;
-  }
   .max-w-\[60\%\] {
     max-width: 60%;
   }
-  .max-w-\[100px\] {
-    max-width: 100px;
-  }
-  .max-w-\[300px\] {
-    max-width: 300px;
-  }
   .max-w-\[400px\] {
     max-width: 400px;
-  }
-  .max-w-\[500px\] {
-    max-width: 500px;
   }
   .min-w-\[100px\] {
     min-width: 100px;
@@ -365,20 +329,11 @@
   .min-w-\[275px\] {
     min-width: 275px;
   }
-  .min-w-\[400px\] {
-    min-width: 400px;
-  }
   .flex-1 {
     flex: 1;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .resize-none {
     resize: none;
@@ -498,13 +453,6 @@
   .text-\[var\(--color-text-muted\)\] {
     color: var(--color-text-muted);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
   .transition-all {
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -581,11 +529,6 @@
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-duration {
   syntax: "*";
@@ -676,7 +619,6 @@
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-scale-x: 1;
       --tw-scale-y: 1;

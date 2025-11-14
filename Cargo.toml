@@ -6,12 +6,23 @@ edition = "2024"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-dioxus = { version = "0.7.1", features = [] }
-dioxus-desktop = "0.7.1"
+dioxus = { version = "0.7.0", features = [] }
+dioxus-desktop = "0.7.0"
 dioxus-free-icons = { version = "0.10.0", features = ["lucide", "feather"] }
+surrealdb = { version = "2.3.10", features = ["kv-mem"] }
+serde_json = "1.0.145"
+serde = { version = "1.0.228", features = ["derive"] }
+tokio = { version = "1", features = [
+    "macros",          # For #[tokio::main]
+    "rt-multi-thread", # For tokio::spawn and the runtime itself
+    "time",            # For tokio::time::sleep
+] }
+log = "0.4.20"
+android_logger = "0.15.1"
+env_logger = "0.11.8"
 
 [features]
-default = ["web"]
+default = ["desktop"]
 web = ["dioxus/web"]
 desktop = ["dioxus/desktop"]
 mobile = ["dioxus/mobile"]

@@ -1,15 +1,21 @@
 #![windows_subsystem = "windows"]
 
+use std::time::Duration;
+
 use dioxus::prelude::*;
 #[cfg(feature = "desktop")]
 use dioxus_desktop::{Config, WindowBuilder};
 use dioxus_free_icons::{
+    Icon,
     icons::{
         fi_icons::{FiChevronDown, FiHash, FiHeadphones, FiMic, FiPlus, FiSend, FiSettings, FiX},
-        ld_icons::{LdCalendar, LdHash, LdNotebook, LdUser},
+        ld_icons::{LdCalendar, LdNotebook},
     },
-    Icon,
 };
+use log::info;
+use serde::{Deserialize, Serialize};
+use surrealdb::Surreal;
+use surrealdb::engine::local::Mem;
 
 const FAVICON: Asset = asset!("/assets/favicon.ico");
 const MAIN_CSS: Asset = asset!("/assets/main.css");
@@ -33,6 +39,18 @@ impl ModalState {
 }
 
 fn main() {
+    #[cfg(target_os = "android")]
+    {
+        android_logger::init_once(
+            android_logger::Config::default().with_max_level(log::LevelFilter::Info),
+        );
+    }
+
+    #[cfg(not(target_os = "android"))]
+    {
+        env_logger::Builder::from_env(env_logger::Env::default().default_filter_or("info")).init();
+    }
+
     dioxus::LaunchBuilder::new()
         .with_cfg(desktop! {
             Config::new().with_window(
@@ -352,10 +370,104 @@ pub fn MainChat() -> Element {
     }
 }
 
+#[derive(Debug, Serialize, Deserialize)]
+struct Person {
+    name: String,
+    status: String,
+}
+
 #[component]
 pub fn Main() -> Element {
     let mut modal_state = ModalState::new();
     use_context_provider(|| modal_state);
+
+    // use_hook(|| {
+    //     spawn_forever(async move {
+    //         let db = match Surreal::new::<RocksDb>("./my_database.db").await {
+    //             Ok(db) => {
+    //                 println!("Database created successfully");
+    //                 db
+    //             }
+    //             Err(e) => {
+    //                 println!("Failed to create database: {}", e);
+    //                 return;
+    //             }
+    //         };
+
+    //         // Select the namespace and database to use
+    //         db.use_ns("my_namespace")
+    //             .use_db("my_database")
+    //             .await
+    //             .unwrap();
+
+    //         // Create a new person
+    //         let created: Option<Person> = db
+    //             .create("person")
+    //             .content(Person {
+    //                 name: "David".to_string(),
+    //                 status: "persistent".to_string(),
+    //             })
+    //             .await
+    //             .unwrap();
+
+    //         println!("Created person: {:?}", created);
+
+    //         // Select all people
+    //         let people: Vec<Person> = db.select("person").await.unwrap();
+    //         println!("Found people: {:?}", people);
+    //     })
+    // });
+
+    tokio::spawn(async move {
+        let db = match Surreal::new::<Mem>(()).await {
+            Ok(db) => {
+                info!("Database created successfully");
+                db
+            }
+            Err(e) => {
+                error!("Failed to create database: {}", e);
+                return;
+            }
+        };
+
+        // Select the namespace and database to use
+        match db.use_ns("my_namespace").use_db("my_database").await {
+            Ok(_) => {
+                info!("Namespace and database selected successfully");
+            }
+            Err(e) => {
+                error!("Failed to select namespace and database: {}", e);
+                return;
+            }
+        }
+
+        // Create a new person
+        let created: Option<Person> = match db
+            .create("person")
+            .content(Person {
+                name: "David".to_string(),
+                status: "persistent".to_string(),
+            })
+            .await
+        {
+            Ok(created) => created,
+            Err(e) => {
+                error!("Failed to create person: {}", e);
+                return;
+            }
+        };
+
+        info!("Created person: {:?}", created);
+
+        // Select all people
+        let people: Vec<Person> = db.select("person").await.unwrap();
+        info!("Found people: {:?}", people);
+
+        loop {
+            info!("Background task is running! 2");
+            tokio::time::sleep(Duration::from_secs(1)).await;
+        }
+    });
 
     rsx! {
         div {
