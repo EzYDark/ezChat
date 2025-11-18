@@ -5,8 +5,15 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[lib]
+crate-type = ["cdylib"]
+
 [dependencies]
-slint = "1.14.1"
+slint = { version = "1.14.1", features = [
+    "backend-android-activity-06",
+    "renderer-skia",
+    "live-preview",
+] }
 
 [build-dependencies]
 slint-build = "1.14.1"

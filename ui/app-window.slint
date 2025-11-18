@@ -1,17 +1,23 @@
 import { Button, VerticalBox } from "std-widgets.slint";
 
+import "../assets/fonts/Lilex/Lilex-Regular.ttf";
+
 export component AppWindow inherits Window {
+    min-width: 800px;
+    min-height: 600px;
     in-out property <int> counter: 42;
+    default-font-family: "Lilex";
     callback request-increase-value();
     VerticalBox {
         Text {
-            text: "Counter: \{root.counter}";
+            font-size: 16px;
+            text: "Counter: " + counter;
         }
 
         Button {
             text: "Increase value";
             clicked => {
-                root.request-increase-value();
+                request-increase-value();
             }
         }
     }

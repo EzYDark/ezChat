@@ -1,0 +1,73 @@
+/* App-wide styling */
+:root {
+    --color-background: #2d2a2e;
+    --color-background-contrast: #211f22;
+    --color-panel: #403e41;
+    --color-panel-active: #4a474b;
+    --color-border: #2d2a2e;
+    --color-border-muted: #1A191B;
+    --color-disabled: #5b595c;
+    --color-message-background: #403e41;
+    --color-text: #fcfcfa;
+    --color-text-muted: #939293;
+    --color-accent: #ffd866;
+    --color-accent-secondary: #78dce8;
+    --color-red: #ff6188;
+    --color-orange: #f59762;
+    --color-yellow: #ffd866;
+    --color-green: #a9dc76;
+    --color-blue: #78dce8;
+    --color-purple: #ab9df2;
+    --color-gray: #727072;
+}
+
+
+body, html {
+    font-family: "Lilex";
+    color: var(--color-text);
+    background-color: var(--color-background);
+    font-size: 0.938rem
+}
+
+p b {
+    color: var(--color-yellow);
+}
+
+p i {
+    color: var(--color-text-muted);
+}
+
+.custom-scrollbar {
+    padding-inline-end: 6px;
+    margin-bottom: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    cursor: default;
+    background: var(--color-panel);
+    border-radius: 0 !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    cursor: default;
+    background: var(--color-gray);
+    border-radius: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:vertical {
+    cursor: default;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-button:single-button {
+    display: none !important;
+}
