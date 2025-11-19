@@ -1,0 +1,57 @@
+export component DropdownItem inherits Rectangle {
+    in property <string> text;
+    callback clicked;
+    height: 40px;
+    background: touch.pressed ? #ffffff10 : (touch.has-hover ? #ffffff05 : transparent);
+    Text {
+        text: root.text;
+        color: white;
+        vertical-alignment: center;
+        x: 10px;
+    }
+
+    touch := TouchArea {
+        clicked => {
+            root.clicked();
+        }
+    }
+}
+
+export component Dropdown {
+    in property <string> text: "MainText";
+    in property <brush> background: #1c1c1c9b;
+    public function close() {
+        menu.close();
+    }
+
+    // Dropdown button
+    Rectangle {
+        background: background;
+        Text {
+            text: root.text;
+            vertical-alignment: center;
+            x: 10px;
+        }
+
+        TouchArea {
+            mouse-cursor: pointer;
+            clicked => {
+                menu.show();
+            }
+        }
+    }
+
+    //Dropdown menu
+    menu := PopupWindow {
+        y: root.height;
+        width: root.width;
+        Rectangle {
+            background: #1c1c1c;
+            border-radius: 4px;
+            VerticalLayout {
+                padding: 4px;
+                @children
+            }
+        }
+    }
+}

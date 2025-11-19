@@ -1,0 +1,56 @@
+export component DropdownItem {
+    in property <string> text: "ItemText"; // Height of each item in the dropdown
+    callback clicked;
+    Rectangle {
+        height: root.height;
+        Text {
+            text: root.text;
+        }
+
+        TouchArea {
+            mouse-cursor: pointer;
+            clicked => {
+                root.clicked();
+            }
+        }
+    }
+}
+
+export component Dropdown {
+    in property <string> btn-text: "ButtonText"; // Dropdown button text
+    in property <brush> btn-background: #1c1c1c9b; // Dropdown button background color
+
+    // Dropdown button
+    Rectangle {
+        height: root.height;
+        background: btn-background;
+        Text {
+            text: btn-text;
+        }
+
+        TouchArea {
+            mouse-cursor: pointer;
+            clicked => {
+                menu.show();
+            }
+        }
+    }
+
+    public function close() {
+        menu.close();
+    }
+
+    //Dropdown menu
+    menu := PopupWindow {
+        close-policy: close-on-click-outside;
+        y: root.height;
+        width: root.width;
+        Rectangle {
+            background: #1c1c1c;
+            VerticalLayout {
+                spacing: 2px;
+                @children
+            }
+        }
+    }
+}

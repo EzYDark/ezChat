@@ -1,23 +1,72 @@
-import { Button, VerticalBox } from "std-widgets.slint";
-
 import "../assets/fonts/Lilex/Lilex-Regular.ttf";
+import { Dropdown, DropdownItem } from "dropdown.slint";
+import { HorizontalBox } from "std-widgets.slint";
 
 export component AppWindow inherits Window {
-    min-width: 800px;
-    min-height: 600px;
-    in-out property <int> counter: 42;
+    preferred-width: 800px;
+    preferred-height: 600px;
+    min-width: 1px;
+    min-height: 1px;
+    max-width: 99999px;
+    max-height: 99999px;
     default-font-family: "Lilex";
-    callback request-increase-value();
-    VerticalBox {
-        Text {
-            font-size: 16px;
-            text: "Counter: " + counter;
-        }
+    Rectangle {
+        background: #161616;
+        HorizontalLayout {
+            // Left Sidebar
+            Rectangle {
+                width: 74px;
+                background: #45284f;
+            }
 
-        Button {
-            text: "Increase value";
-            clicked => {
-                request-increase-value();
+            // Secondary Sidebar
+            Rectangle {
+                width: 250px;
+                background: #284f3f;
+                VerticalLayout {
+                    // Server options
+                    dp := Dropdown {
+                        btn-text: "EzYDark";
+                        height: 46px;
+                        DropdownItem {
+                            height: 36px;
+                            text: "Dark";
+                            clicked => {
+                                debug("Selected Dark");
+                                dp.close();
+                            }
+                        }
+
+                        DropdownItem {
+                            height: 36px;
+                            text: "Light";
+                            clicked => {
+                                debug("Selected Light");
+                                dp.close();
+                            }
+                        }
+
+                        DropdownItem {
+                            height: 36px;
+                            text: "System";
+                            clicked => {
+                                debug("Selected System");
+                                dp.close();
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Main Content Bar
+            Rectangle {
+                background: #181741;
+            }
+
+            // Right Sidebar
+            Rectangle {
+                width: 250px;
+                background: #404117;
             }
         }
     }
