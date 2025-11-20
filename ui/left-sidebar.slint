@@ -1,0 +1,87 @@
+import { Palette } from "palette.slint";
+
+export component LeftSidebar {
+    height: 100%;
+    HorizontalLayout {
+        alignment: center;
+        VerticalLayout {
+            y: 10px;
+            spacing: 8px;
+            Rectangle {
+                height: 48px;
+                width: 48px;
+                background: plus-touch.has-hover ? Palette.selection : transparent;
+                animate background { duration: 100ms; }
+                border-width: 2px;
+                border-color: Palette.border;
+                Image {
+                    source: @image-url("../assets/icons/plus.svg");
+                    height: 32px;
+                    width: 32px;
+                    colorize: white;
+                }
+
+                plus-touch := TouchArea {
+                    mouse-cursor: pointer;
+                    clicked => {
+                        debug("Selected Plus Icon");
+                    }
+                }
+            }
+
+            Rectangle {
+                width: 48px;
+                height: 48px;
+                Image {
+                    source: @image-url("../assets/images/cat.png");
+                    height: btn-touch.has-hover ? 50px : 48px;
+                    width: btn-touch.has-hover ? 50px : 48px;
+                    animate height, width { duration: 100ms; }
+                    image-fit: ImageFit.cover;
+                    btn-touch := TouchArea {
+                        mouse-cursor: pointer;
+                        clicked => {
+                            debug("Selected Server Icon");
+                        }
+                    }
+                }
+            }
+
+            Rectangle {
+                width: 48px;
+                height: 48px;
+                Image {
+                    source: @image-url("../assets/images/cat.png");
+                    height: btn-touch2.has-hover ? 50px : 48px;
+                    width: btn-touch2.has-hover ? 50px : 48px;
+                    animate height, width { duration: 100ms; }
+                    image-fit: ImageFit.cover;
+                    btn-touch2 := TouchArea {
+                        mouse-cursor: pointer;
+                        clicked => {
+                            debug("Selected Server Icon");
+                        }
+                    }
+                }
+            }
+
+            Rectangle {
+                width: 48px;
+                height: 48px;
+                Image {
+                    source: @image-url("../assets/images/cat.png");
+                    height: btn-touch3.has-hover ? 50px : 48px;
+                    width: btn-touch3.has-hover ? 50px : 48px;
+                    animate height, width { duration: 100ms; }
+                    image-fit: ImageFit.cover;
+                    btn-touch3 := TouchArea {
+                        mouse-cursor: pointer;
+                        clicked => {
+                            debug("Selected Server Icon");
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

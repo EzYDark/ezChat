@@ -3,6 +3,8 @@ import "../assets/fonts/Lilex/Lilex-Bold.ttf";
 import "../assets/fonts/Lilex/Lilex-Italic.ttf";
 import { Dropdown, DropdownItem } from "dropdown.slint";
 import { HorizontalBox } from "std-widgets.slint";
+import { Palette } from "palette.slint";
+import { LeftSidebar } from "left-sidebar.slint";
 
 export component AppWindow inherits Window {
     preferred-width: 800px;
@@ -13,18 +15,23 @@ export component AppWindow inherits Window {
     max-height: 99999px;
     default-font-family: "Lilex";
     Rectangle {
-        background: #161616;
+        background: Palette.background;
         HorizontalLayout {
             // Left Sidebar
             Rectangle {
                 width: 74px;
-                background: #45284f;
+                border-width: 0.5px;
+                border-color: Palette.border;
+                background: Palette.background-dark;
+                LeftSidebar { }
             }
 
             // Secondary Sidebar
             Rectangle {
+                border-width: 0.5px;
+                border-color: Palette.border;
                 width: 250px;
-                background: #284f3f;
+                background: Palette.background-dark;
                 VerticalLayout {
                     // Server options
                     dp := Dropdown {
@@ -32,29 +39,45 @@ export component AppWindow inherits Window {
                         height: 46px;
                         DropdownItem {
                             height: 36px;
-                            text: "Dark";
+                            text: "Invite People";
                             clicked => {
-                                debug("Selected Dark");
+                                debug("Selected Invite People");
                                 dp.close();
                             }
                         }
 
                         DropdownItem {
                             height: 36px;
-                            text: "Light";
+                            text: "Server Settings";
                             clicked => {
-                                debug("Selected Light");
+                                debug("Selected Server Settings");
                                 dp.close();
                             }
                         }
 
                         DropdownItem {
                             height: 36px;
-                            text: "System";
+                            text: "Leave Server";
                             clicked => {
-                                debug("Selected System");
+                                debug("Selected Leave Server");
                                 dp.close();
                             }
+                        }
+                    }
+
+                    VerticalLayout {
+                        alignment: space-between;
+                        Rectangle {
+                            height: 40px;
+                            background: Palette.background-dark;
+                            border-width: 0.5px;
+                            border-color: Palette.border;
+                        }
+
+                        Rectangle {
+                            height: 64px;
+                            border-width: 0.5px;
+                            border-color: Palette.border;
                         }
                     }
                 }
@@ -62,13 +85,17 @@ export component AppWindow inherits Window {
 
             // Main Content Bar
             Rectangle {
-                background: #181741;
+                background: Palette.background;
+                border-width: 0.5px;
+                border-color: Palette.border;
             }
 
             // Right Sidebar
             Rectangle {
                 width: 250px;
-                background: #404117;
+                background: Palette.background-dark;
+                border-width: 0.5px;
+                border-color: Palette.border;
             }
         }
     }

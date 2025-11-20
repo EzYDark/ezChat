@@ -1,13 +1,18 @@
+import { Palette } from "palette.slint";
+
 export component DropdownItem {
-    in property <string> text: "ItemText"; // Height of each item in the dropdown
+    in property <string> text: "ItemText";
+    in property <brush> background: transparent;
+    in property <brush> hover-color: Palette.selection;
     callback clicked;
     Rectangle {
         height: root.height;
         width: root.width;
-        background: item-touch.has-hover ? #363636 : transparent;
+        background: item-touch.has-hover ? root.hover-color : root.background;
+        animate background { duration: 100ms; }
         Text {
             width: root.width;
-            font-size: 14px;
+            font-size: 13px;
             text: root.text;
             x: 10px;
         }
@@ -22,20 +27,37 @@ export component DropdownItem {
 }
 
 export component Dropdown {
-    in property <string> text: "ButtonText"; // Dropdown button text
-    in property <brush> background: #1c1c1c9b; // Dropdown button background color
+    in property <string> text: "ButtonText";
+    in property <brush> background: Palette.background-dark;
+    in property <brush> hover-color: Palette.selection;
+    in property <brush> border-color: Palette.border;
+    in property <brush> menu-background: Palette.background-darker;
 
     // Dropdown button
     Rectangle {
+        border-width: 0.5px;
+        border-color: root.border-color;
+        background: button-touch.has-hover ? root.hover-color : root.background;
+        animate background { duration: 150ms; }
         height: root.height;
         width: root.width;
-        background: button-touch.has-hover ? root.background.brighter(0.4) : root.background;
-        Text {
-            font-size: 15px;
-            font-weight: 700;
-            width: root.width;
-            text: text;
-            x: 10px;
+        VerticalLayout {
+            alignment: center;
+            HorizontalLayout {
+                padding: 10px;
+                Text {
+                    font-size: 15px;
+                    font-weight: 700;
+                    text: text;
+                }
+
+                Image {
+                    source: @image-url("../assets/icons/chevron-down.svg");
+                    height: 16px;
+                    width: 16px;
+                    colorize: white;
+                }
+            }
         }
 
         button-touch := TouchArea {
@@ -56,9 +78,10 @@ export component Dropdown {
         y: root.height;
         width: root.width;
         Rectangle {
-            background: #1c1c1c;
+            background: root.menu-background;
+            border-width: 0.5px;
+            border-color: root.border-color;
             VerticalLayout {
-                spacing: 2px;
                 @children
             }
         }
