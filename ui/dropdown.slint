@@ -3,11 +3,16 @@ export component DropdownItem {
     callback clicked;
     Rectangle {
         height: root.height;
+        width: root.width;
+        background: item-touch.has-hover ? #363636 : transparent;
         Text {
+            width: root.width;
+            font-size: 14px;
             text: root.text;
+            x: 10px;
         }
 
-        TouchArea {
+        item-touch := TouchArea {
             mouse-cursor: pointer;
             clicked => {
                 root.clicked();
@@ -17,18 +22,23 @@ export component DropdownItem {
 }
 
 export component Dropdown {
-    in property <string> btn-text: "ButtonText"; // Dropdown button text
-    in property <brush> btn-background: #1c1c1c9b; // Dropdown button background color
+    in property <string> text: "ButtonText"; // Dropdown button text
+    in property <brush> background: #1c1c1c9b; // Dropdown button background color
 
     // Dropdown button
     Rectangle {
         height: root.height;
-        background: btn-background;
+        width: root.width;
+        background: button-touch.has-hover ? root.background.brighter(0.4) : root.background;
         Text {
-            text: btn-text;
+            font-size: 15px;
+            font-weight: 700;
+            width: root.width;
+            text: text;
+            x: 10px;
         }
 
-        TouchArea {
+        button-touch := TouchArea {
             mouse-cursor: pointer;
             clicked => {
                 menu.show();

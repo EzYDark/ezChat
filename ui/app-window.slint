@@ -1,4 +1,6 @@
 import "../assets/fonts/Lilex/Lilex-Regular.ttf";
+import "../assets/fonts/Lilex/Lilex-Bold.ttf";
+import "../assets/fonts/Lilex/Lilex-Italic.ttf";
 import { Dropdown, DropdownItem } from "dropdown.slint";
 import { HorizontalBox } from "std-widgets.slint";
 
@@ -26,7 +28,7 @@ export component AppWindow inherits Window {
                 VerticalLayout {
                     // Server options
                     dp := Dropdown {
-                        btn-text: "EzYDark";
+                        text: "EzYDark";
                         height: 46px;
                         DropdownItem {
                             height: 36px;
