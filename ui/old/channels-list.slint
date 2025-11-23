@@ -1,0 +1,74 @@
+import { Palette } from "palette.slint";
+
+export component ChannelsList {
+    Rectangle {
+        border-width: 0.5px;
+        border-color: Palette.border;
+        VerticalLayout {
+            alignment: start;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            // Channel
+            Rectangle {
+                background: ch-touch1.has-hover ? Palette.selection : transparent;
+                HorizontalLayout {
+                    spacing: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    Image {
+                        source: @image-url("../assets/icons/hash.svg");
+                        width: 18px;
+                        height: 18px;
+                        colorize: white;
+                    }
+
+                    Text {
+                        text: "General1";
+                        font-size: 13px;
+                        vertical-alignment: center;
+                    }
+                }
+
+                ch-touch1 := TouchArea {
+                    mouse-cursor: pointer;
+                    clicked => {
+                        debug("Selected General1");
+                    }
+                }
+            }
+
+            // Channel
+            Rectangle {
+                background: ch-touch2.has-hover ? Palette.selection : transparent;
+                HorizontalLayout {
+                    spacing: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    Image {
+                        source: @image-url("../assets/icons/hash.svg");
+                        width: 18px;
+                        height: 18px;
+                        colorize: white;
+                    }
+
+                    Text {
+                        text: "General2";
+                        font-size: 13px;
+                        vertical-alignment: center;
+                    }
+                }
+
+                ch-touch2 := TouchArea {
+                    mouse-cursor: pointer;
+                    clicked => {
+                        debug("Selected General2");
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,101 +1,110 @@
 import "../assets/fonts/Lilex/Lilex-Regular.ttf";
 import "../assets/fonts/Lilex/Lilex-Bold.ttf";
 import "../assets/fonts/Lilex/Lilex-Italic.ttf";
-import { Dropdown, DropdownItem } from "dropdown.slint";
-import { HorizontalBox } from "std-widgets.slint";
 import { Palette } from "palette.slint";
-import { LeftSidebar } from "left-sidebar.slint";
+import { Button } from "std-widgets.slint";
+
 
 export component AppWindow inherits Window {
-    preferred-width: 800px;
-    preferred-height: 600px;
+    preferred-width: 1280px;
+    preferred-height: 720px;
     min-width: 1px;
     min-height: 1px;
     max-width: 99999px;
     max-height: 99999px;
     default-font-family: "Lilex";
+    no-frame: true;
+    resize-border-width: 10px;
+    callback move-window(length, length);
+    callback maximize-window();
     Rectangle {
         background: Palette.background;
-        HorizontalLayout {
-            // Left Sidebar
+        VerticalLayout {
+            // Top app bar
             Rectangle {
-                width: 74px;
+                height: 32px;
                 border-width: 0.5px;
                 border-color: Palette.border;
-                background: Palette.background-dark;
-                LeftSidebar { }
-            }
+                background: Palette.background-darker;
+                TouchArea {
+                    width: 100%;
+                    height: 100%;
+                    moved => {
+                        root.move-window(self.mouse-x - self.pressed-x, self.mouse-y - self.pressed-y);
+                    }
+                    double-clicked => {
+                        root.maximize-window();
+                    }
+                }
 
-            // Secondary Sidebar
-            Rectangle {
-                border-width: 0.5px;
-                border-color: Palette.border;
-                width: 250px;
-                background: Palette.background-dark;
-                VerticalLayout {
-                    // Server options
-                    dp := Dropdown {
-                        text: "EzYDark";
-                        height: 46px;
-                        DropdownItem {
-                            height: 36px;
-                            text: "Invite People";
-                            clicked => {
-                                debug("Selected Invite People");
-                                dp.close();
-                            }
-                        }
-
-                        DropdownItem {
-                            height: 36px;
-                            text: "Server Settings";
-                            clicked => {
-                                debug("Selected Server Settings");
-                                dp.close();
-                            }
-                        }
-
-                        DropdownItem {
-                            height: 36px;
-                            text: "Leave Server";
-                            clicked => {
-                                debug("Selected Leave Server");
-                                dp.close();
-                            }
+                HorizontalLayout {
+                    // Left side of the app bar
+                    VerticalLayout {
+                        alignment: center;
+                        padding-left: 10px;
+                        Text {
+                            text: "ezChat";
                         }
                     }
 
+                    // Right side of the app bar
                     VerticalLayout {
-                        alignment: space-between;
-                        Rectangle {
-                            height: 40px;
-                            background: Palette.background-dark;
-                            border-width: 0.5px;
-                            border-color: Palette.border;
-                        }
+                        alignment: center;
+                        HorizontalLayout {
+                            // Minimize button
+                            Rectangle {
+                                background: Palette.grey;
+                                width: 32px;
+                                height: 32px;
+                            }
 
-                        Rectangle {
-                            height: 64px;
-                            border-width: 0.5px;
-                            border-color: Palette.border;
+                            // Maximize button
+                            Rectangle {
+                                background: Palette.yellow;
+                                width: 32px;
+                                height: 32px;
+                            }
+
+                            // Close button
+                            Rectangle {
+                                background: Palette.red;
+                                width: 32px;
+                                height: 32px;
+                            }
                         }
                     }
                 }
             }
 
-            // Main Content Bar
-            Rectangle {
-                background: Palette.background;
-                border-width: 0.5px;
-                border-color: Palette.border;
-            }
+            // Main app content
+            HorizontalLayout {
+                Rectangle {
+                    width: 74px;
+                    border-width: 0.5px;
+                    border-color: Palette.border;
+                    background: Palette.background-darker;
+                }
 
-            // Right Sidebar
-            Rectangle {
-                width: 250px;
-                background: Palette.background-dark;
-                border-width: 0.5px;
-                border-color: Palette.border;
+                Rectangle {
+                    width: 250px;
+                    border-width: 0.5px;
+                    border-color: Palette.border;
+                    background: Palette.background-dark;
+                }
+
+                Rectangle {
+                    border-width: 0.5px;
+                    border-color: Palette.border;
+                    background: Palette.background;
+                    Rectangle { }
+                }
+
+                Rectangle {
+                    width: 225px;
+                    border-width: 0.5px;
+                    border-color: Palette.border;
+                    background: Palette.background-darker;
+                }
             }
         }
     }
