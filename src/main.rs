@@ -2,6 +2,7 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 use std::error::Error;
+use i_slint_backend_winit::WinitWindowAccessor;
 
 slint::include_modules!();
 
