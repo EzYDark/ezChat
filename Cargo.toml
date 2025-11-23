@@ -13,7 +13,10 @@ slint = { version = "1.14.1", features = [
     "backend-android-activity-06",
     "renderer-skia",
     "live-preview",
+    "backend-winit",
 ] }
+i-slint-backend-winit = "=1.14.1"
+winit = "0.30"
 
 [build-dependencies]
 slint-build = "1.14.1"

@@ -8,19 +8,14 @@ slint::include_modules!();
 fn main() -> Result<(), Box<dyn Error>> {
     let ui = AppWindow::new()?;
 
-    ui.on_move_window({
+    ui.on_start_window_drag({
         let ui_handle = ui.as_weak();
-        move |dx, dy| {
+        move || {
             let ui = ui_handle.unwrap();
             let window = ui.window();
-            let position = window.position();
-            let scale_factor = window.scale_factor();
-            let dx_px = dx * scale_factor;
-            let dy_px = dy * scale_factor;
-            window.set_position(slint::PhysicalPosition::new(
-                position.x + dx_px as i32,
-                position.y + dy_px as i32,
-            ));
+            window.with_winit_window(|winit_window| {
+                let _ = winit_window.drag_window();
+            });
         }
     });
 

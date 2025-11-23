@@ -15,7 +15,7 @@ export component AppWindow inherits Window {
     default-font-family: "Lilex";
     no-frame: true;
     resize-border-width: 10px;
-    callback move-window(length, length);
+    callback start-window-drag();
     callback maximize-window();
     Rectangle {
         background: Palette.background;
@@ -29,8 +29,10 @@ export component AppWindow inherits Window {
                 TouchArea {
                     width: 100%;
                     height: 100%;
-                    moved => {
-                        root.move-window(self.mouse-x - self.pressed-x, self.mouse-y - self.pressed-y);
+                    pointer-event(event) => {
+                        if (event.kind == PointerEventKind.down) {
+                            root.start-window-drag();
+                        }
                     }
                     double-clicked => {
                         root.maximize-window();
