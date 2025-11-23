@@ -15,7 +15,7 @@ slint = { version = "1.14.1", features = [
     "live-preview",
     "backend-winit",
 ] }
-i-slint-backend-winit = "=1.14.1"
+i-slint-backend-winit = { version = "=1.14.1", features = ["renderer-skia"] }
 winit = "0.30"
 
 [build-dependencies]

@@ -80,6 +80,7 @@ export component AppWindow inherits Window {
 
             // Main app content
             HorizontalLayout {
+                // Left sidebar 
                 Rectangle {
                     width: 74px;
                     border-width: 0.5px;
@@ -87,13 +88,31 @@ export component AppWindow inherits Window {
                     background: Palette.background-darker;
                 }
 
+                // Second left sidebar
                 Rectangle {
                     width: 250px;
                     border-width: 0.5px;
                     border-color: Palette.border;
                     background: Palette.background-dark;
+                    VerticalLayout {
+                        // Channels list
+                        Rectangle {
+                            border-width: 0.5px;
+                            border-color: Palette.border;
+                            background: Palette.background-dark;
+                        }
+
+                        // Controls bar
+                        Rectangle {
+                            height: 80px;
+                            border-width: 0.5px;
+                            border-color: Palette.border;
+                            background: Palette.background-darker;
+                        }
+                    }
                 }
 
+                // Main content
                 Rectangle {
                     border-width: 0.5px;
                     border-color: Palette.border;
@@ -101,6 +120,7 @@ export component AppWindow inherits Window {
                     Rectangle { }
                 }
 
+                // Right sidebar
                 Rectangle {
                     width: 225px;
                     border-width: 0.5px;
