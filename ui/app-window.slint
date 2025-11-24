@@ -4,6 +4,74 @@ import "../assets/fonts/Lilex/Lilex-Italic.ttf";
 import { Palette } from "palette.slint";
 import { Button } from "std-widgets.slint";
 
+export component TestWindow inherits Window {
+    preferred-width: 1280px;
+    preferred-height: 720px;
+    min-width: 1px;
+    min-height: 1px;
+    max-width: 99999px;
+    max-height: 99999px;
+    default-font-family: "Lilex";
+    GridLayout {
+        Rectangle {
+            background: Palette.green;
+            width: 72px;
+        }
+
+        Rectangle {
+            background: Palette.blue;
+            width: 250px;
+        }
+
+        Rectangle {
+            background: Palette.yellow;
+            GridLayout {
+                Rectangle {
+                    row: 0;
+                    background: Palette.orange;
+                }
+
+                Rectangle {
+                    row: 1;
+                    background: Palette.purple;
+                    height: 100px;
+                    HorizontalLayout {
+                        padding: 10px;
+                        Rectangle {
+                            background: Palette.grey;
+                            HorizontalLayout {
+                                spacing: 10px;
+                                alignment: start;
+                                Rectangle {
+                                    background: Palette.red;
+                                    width: 32px;
+                                    height: 32px;
+                                }
+
+                                Rectangle {
+                                    background: Palette.red;
+                                    width: 32px;
+                                    height: 32px;
+                                }
+
+                                Rectangle {
+                                    background: Palette.red;
+                                    width: 32px;
+                                    height: 32px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        Rectangle {
+            background: Palette.red;
+            width: 225px;
+        }
+    }
+}
 
 export component AppWindow inherits Window {
     preferred-width: 1280px;
@@ -89,7 +157,7 @@ export component AppWindow inherits Window {
                 }
             }
 
-            // Main app content
+            // Main window content
             HorizontalLayout {
                 // Left sidebar 
                 Rectangle {
@@ -150,9 +218,38 @@ export component AppWindow inherits Window {
                     border-width: 0.5px;
                     border-color: Palette.border;
                     background: Palette.background;
-                    Rectangle { }
-                }
+                    VerticalLayout {
+                        // Chat
+                        Rectangle {
+                            border-width: 0.5px;
+                            border-color: Palette.border;
+                        }
+                        // Message input
+                        HorizontalLayout {
+                            padding: 10px;
+                            Rectangle {
+                                height: 46px;
+                                border-width: 0.6px;
+                                border-color: Palette.border-dark;
+                                background: Palette.background-dark;
+                                HorizontalLayout {
+                                    alignment: start;
+                                    Rectangle {
+                                        width: 32px;
+                                        height: 32px;
+                                        background: Palette.background-darker;
+                                    }
 
+                                    Rectangle {
+                                        width: 32px;
+                                        height: 32px;
+                                        background: Palette.border-dark;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 // Resizer for right sidebar
                 Rectangle {
                     width: 2px;
