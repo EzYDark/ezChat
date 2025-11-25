@@ -29,6 +29,23 @@ fn main() -> Result<(), Box<dyn Error>> {
         }
     });
 
+    ui.on_minimize_window({
+        let ui_handle = ui.as_weak();
+        move || {
+            let ui = ui_handle.unwrap();
+            let window = ui.window();
+            window.set_minimized(true);
+        }
+    });
+
+    ui.on_close_window({
+        let ui_handle = ui.as_weak();
+        move || {
+            let ui = ui_handle.unwrap();
+            ui.window().hide();
+        }
+    });
+
     ui.run()?;
 
     Ok(())

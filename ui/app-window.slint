@@ -85,6 +85,8 @@ export component AppWindow inherits Window {
     resize-border-width: 10px;
     callback start-window-drag();
     callback maximize-window();
+    callback close-window();
+    callback minimize-window();
 
     // Sidebar width properties
     in-out property <length> left-sidebar-width: 74px;
@@ -134,23 +136,59 @@ export component AppWindow inherits Window {
                         HorizontalLayout {
                             // Minimize button
                             Rectangle {
-                                background: Palette.grey;
+                                background: ta-minimize.pressed ? Palette.minimize-btn-pressed : (ta-minimize.has-hover ? Palette.selection : transparent);
                                 width: 32px;
                                 height: 32px;
+                                Image {
+                                    source: @image-url("../assets/icons/minus.svg");
+                                    colorize: Palette.foreground;
+                                    height: 15px;
+                                    width: 15px;
+                                }
+
+                                ta-minimize := TouchArea {
+                                    clicked => {
+                                        root.minimize-window();
+                                    }
+                                }
                             }
 
                             // Maximize button
                             Rectangle {
-                                background: Palette.yellow;
+                                background: ta-maximize.pressed ? Palette.maximize-btn-pressed : (ta-maximize.has-hover ? Palette.yellow : transparent);
                                 width: 32px;
                                 height: 32px;
+                                Image {
+                                    source: @image-url("../assets/icons/maximize.svg");
+                                    colorize: ta-maximize.has-hover ? Palette.black : Palette.foreground;
+                                    height: 12px;
+                                    width: 12px;
+                                }
+
+                                ta-maximize := TouchArea {
+                                    clicked => {
+                                        root.maximize-window();
+                                    }
+                                }
                             }
 
                             // Close button
                             Rectangle {
-                                background: Palette.red;
+                                background: ta-close.pressed ? Palette.close-btn-pressed : (ta-close.has-hover ? Palette.red : transparent);
                                 width: 32px;
                                 height: 32px;
+                                Image {
+                                    source: @image-url("../assets/icons/x.svg");
+                                    colorize: ta-close.has-hover ? Palette.black : Palette.foreground;
+                                    height: 15px;
+                                    width: 15px;
+                                }
+
+                                ta-close := TouchArea {
+                                    clicked => {
+                                        root.close-window();
+                                    }
+                                }
                             }
                         }
                     }
@@ -280,6 +318,12 @@ export component AppWindow inherits Window {
                     background: Palette.background-darker;
                 }
             }
+        }
+
+        // Window border
+        Rectangle {
+            border-width: 1px;
+            border-color: Palette.window-border;
         }
     }
 }
